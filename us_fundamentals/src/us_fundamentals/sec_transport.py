@@ -256,7 +256,15 @@ class SecTransport:
                 )
 
             body = response.content
-            declared = response.headers.get("Content-Length")
+            # Content-Length describes the wire bytes; when the body arrived
+            # compressed (SEC gzips most text), httpx has already decompressed
+            # it and the sizes legitimately differ. Verify only for identity.
+            encoding = response.headers.get("Content-Encoding", "identity")
+            declared = (
+                response.headers.get("Content-Length")
+                if encoding in ("identity", "")
+                else None
+            )
             if declared is not None and int(declared) != len(body):
                 retries += 1
                 if retries > self.config.max_retries:
