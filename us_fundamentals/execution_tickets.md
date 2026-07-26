@@ -1119,9 +1119,54 @@ and auditable release process.
 
 These items should not be pulled into a Release 1 ticket as incidental scope:
 
+### UF-070 — Add specialist issuer accounting schemas
+
+**Priority / size:** P2 / L
+
+**Depends on:** UF-002, UF-040, UF-050, UF-056, UF-061
+
+**Outcome:** A later release supports banks, insurers, REITs, utilities, and
+investment companies through explicit sector-specific ontologies, mappings,
+derived metrics, and QC rules without weakening the ordinary-operating-company
+contract or silently reclassifying Release 1 history.
+
+**Acceptance criteria:**
+
+- Before implementation begins, the work is split into one independently
+  releasable child ticket per issuer class and each child is resized using the
+  evidence and conventions established by UF-005; UF-070 closes only when all
+  five child tickets are complete.
+- A new release charter and executable eligibility-policy version identify the
+  supported issuer classes and the applicable accounting-schema version;
+  Release 1 classifications and outputs remain immutable.
+- The canonical dictionary defines sector applicability and separate reported
+  and derived metrics for bank credit and deposit activity, insurance premiums
+  and reserves, REIT property operations and funds from operations, regulated
+  utility balances, and investment-company portfolios and net asset value.
+- Mapping rules are versioned by issuer class and taxonomy vintage, reject
+  cross-sector fallbacks, and preserve every source fact, context, unit,
+  dimension, accession, and comparability basis.
+- Sector-specific accounting identities, cross-statement checks, materiality
+  thresholds, derived formulas, and quarantine rules are documented and
+  executable; a generic Release 1 QC rule cannot override a valid specialist
+  presentation.
+- The audited golden corpus includes representative annual, quarterly, and
+  amended filings for every issuer class across early and current taxonomy
+  vintages, custom-tag rates, fiscal calendars, and material reporting
+  patterns.
+- Each issuer class meets approved precision, coverage, provenance,
+  reconciliation, and zero-PIT-leakage gates before that class is published;
+  failure by one class does not authorize or block publication of another.
+- Research outputs expose sector applicability and definition versions so
+  users cannot compare incompatible ordinary-company and specialist metrics
+  without an explicit policy.
+- Backfill, incremental ingestion, release reports, dashboards, and alerts are
+  segmented by issuer class and accounting-schema version.
+
+The remaining follow-ons are:
+
 - detailed XBRL footnote and unstructured-text extraction;
 - segment, geography, lease, debt-maturity, pension, and tax-note schemas;
-- specialist accounting schemas for banks, insurers, REITs, and utilities;
 - a survivorship-free prices, returns, and corporate-actions product;
 - licensed CRSP, Compustat, or CUSIP adapters;
 - point-in-time FX translation and currency-normalized research values;
