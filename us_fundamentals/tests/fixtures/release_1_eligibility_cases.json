@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "cases": [
+    {
+      "id": "included-form-10-k",
+      "category": "included_form_10_k",
+      "input": {
+        "accession": "0000000001-24-000001",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "acquired"
+      },
+      "expected": {
+        "eligibility_status": "eligible",
+        "reason_codes": [
+          "eligible"
+        ],
+        "ingestion_status": "acquired"
+      }
+    },
+    {
+      "id": "included-form-10-q",
+      "category": "included_form_10_q",
+      "input": {
+        "accession": "0000000001-24-000002",
+        "form": "10-Q",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-05-10T09:00:00-04:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "eligible",
+        "reason_codes": [
+          "eligible"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "included-form-10-k-a",
+      "category": "included_form_10_k_a",
+      "input": {
+        "accession": "0000000001-24-000003",
+        "form": "10-K/A",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-03-01T17:45:00-05:00",
+        "ingestion_status": "retry_pending"
+      },
+      "expected": {
+        "eligibility_status": "eligible",
+        "reason_codes": [
+          "eligible"
+        ],
+        "ingestion_status": "retry_pending"
+      }
+    },
+    {
+      "id": "included-form-10-q-a-terminal-ingestion-failure",
+      "category": "included_form_10_q_a",
+      "input": {
+        "accession": "0000000001-24-000004",
+        "form": "10-Q/A",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-06-01T12:00:00-04:00",
+        "ingestion_status": "terminal_failure"
+      },
+      "expected": {
+        "eligibility_status": "eligible",
+        "reason_codes": [
+          "eligible"
+        ],
+        "ingestion_status": "terminal_failure"
+      }
+    },
+    {
+      "id": "included-at-release-start-boundary",
+      "category": "included_release_start_boundary",
+      "input": {
+        "accession": "0000000001-10-000001",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2010-01-01T00:00:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "eligible",
+        "reason_codes": [
+          "eligible"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-form",
+      "category": "excluded_form",
+      "input": {
+        "accession": "0000000001-24-000005",
+        "form": "8-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "acquired"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_form"
+        ],
+        "ingestion_status": "acquired"
+      }
+    },
+    {
+      "id": "excluded-accounting-standard",
+      "category": "excluded_accounting_standard_ifrs",
+      "input": {
+        "accession": "0000000001-24-000006",
+        "form": "10-K",
+        "accounting_standard": "IFRS",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_accounting_standard"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-foreign-private-issuer",
+      "category": "excluded_registrant_type_foreign_private_issuer",
+      "input": {
+        "accession": "0000000001-24-000007",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "foreign_private_issuer",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "acquired"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_registrant_type"
+        ],
+        "ingestion_status": "acquired"
+      }
+    },
+    {
+      "id": "excluded-bank",
+      "category": "excluded_issuer_type_bank",
+      "input": {
+        "accession": "0000000001-24-000008",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "bank",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-insurer",
+      "category": "excluded_issuer_type_insurer",
+      "input": {
+        "accession": "0000000001-24-000009",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "insurer",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-reit",
+      "category": "excluded_issuer_type_reit",
+      "input": {
+        "accession": "0000000001-24-000010",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "reit",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-utility",
+      "category": "excluded_issuer_type_utility",
+      "input": {
+        "accession": "0000000001-24-000011",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "utility",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-investment-company",
+      "category": "excluded_issuer_type_investment_company",
+      "input": {
+        "accession": "0000000001-24-000012",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "investment_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-business-development-company",
+      "category": "excluded_issuer_type_business_development_company",
+      "input": {
+        "accession": "0000000001-24-000013",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "business_development_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-shell-company",
+      "category": "excluded_issuer_type_shell_company",
+      "input": {
+        "accession": "0000000001-24-000014",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "shell_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-asset-backed-issuer",
+      "category": "excluded_issuer_type_asset_backed_issuer",
+      "input": {
+        "accession": "0000000001-24-000015",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "asset_backed_issuer",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-other-specialized-registrant",
+      "category": "excluded_issuer_type_other_specialized_registrant",
+      "input": {
+        "accession": "0000000001-24-000016",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "other_specialized_registrant",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_attempted"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "unsupported_issuer_type"
+        ],
+        "ingestion_status": "not_attempted"
+      }
+    },
+    {
+      "id": "excluded-before-release-start",
+      "category": "excluded_before_release_start",
+      "input": {
+        "accession": "0000000001-09-000017",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2009-12-31T23:59:59-05:00",
+        "ingestion_status": "unavailable_upstream"
+      },
+      "expected": {
+        "eligibility_status": "excluded",
+        "reason_codes": [
+          "before_release_start"
+        ],
+        "ingestion_status": "unavailable_upstream"
+      }
+    },
+    {
+      "id": "indeterminate-unknown-issuer-type",
+      "category": "indeterminate_unknown_issuer_type",
+      "input": {
+        "accession": "0000000001-24-000018",
+        "form": "10-K",
+        "accounting_standard": "US-GAAP",
+        "registrant_type": "domestic",
+        "issuer_type": "unknown",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_recorded"
+      },
+      "expected": {
+        "eligibility_status": "indeterminate",
+        "reason_codes": [
+          "unknown_issuer_type"
+        ],
+        "ingestion_status": "not_recorded"
+      }
+    },
+    {
+      "id": "indeterminate-missing-accounting-standard",
+      "category": "indeterminate_missing_required_field",
+      "input": {
+        "accession": "0000000001-24-000019",
+        "form": "10-K",
+        "registrant_type": "domestic",
+        "issuer_type": "operating_company",
+        "sec_acceptance_datetime": "2024-02-15T16:05:00-05:00",
+        "ingestion_status": "not_recorded"
+      },
+      "expected": {
+        "eligibility_status": "indeterminate",
+        "reason_codes": [
+          "missing_required_field"
+        ],
+        "ingestion_status": "not_recorded"
+      }
+    }
+  ]
+}
