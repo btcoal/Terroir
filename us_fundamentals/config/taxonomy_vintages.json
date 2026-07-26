@@ -288,10 +288,11 @@
     {
       "family": "us-gaap",
       "vintages": [
+        2008,
         2009,
         2010
       ],
-      "reason": "Pre-2011 us-gaap packages were hosted at taxonomies.xbrl.us, which no longer serves them. Early-vintage filings that reference them are rare (UF-010A: XBRL mandate phase-in) and their consumed schemas are captured per-accession as external closure objects under UF-012. Resolve via SEC archive mirror if the UF-021 coverage check reports live references."
+      "reason": "Pre-2011 us-gaap packages (v1.0 2008 and the 2009/2010 annual releases) were hosted at taxonomies.xbrl.us, which no longer serves them. Early Release 1 filings (2010-2012 band) may reference them; consumed schemas are captured per-accession as external closure objects under UF-012, and an SEC archive mirror is the resolution path if the UF-021 coverage check reports live references."
     },
     {
       "family": "dei/country/currency/exch/stpr",

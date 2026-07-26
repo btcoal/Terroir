@@ -54,7 +54,7 @@ PATTERNS = {
 KNOWN_GAPS = [
     {
         "family": "us-gaap",
-        "vintages": [2009, 2010],
+        "vintages": [2008, 2009, 2010],
         "reason": (
             "Pre-2011 us-gaap packages were hosted at taxonomies.xbrl.us, "
             "which no longer serves them. Early-vintage filings that "
