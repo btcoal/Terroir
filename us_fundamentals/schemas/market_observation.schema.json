@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "us_fundamentals/market_observation/1.0.0",
+  "title": "market_observation",
+  "description": "One security, one session, one source, one dataset version. Interface contract for a future survivorship-free market dataset; Release 1 ships no rows.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "security_id",
+    "session_date",
+    "source",
+    "dataset_version",
+    "raw_close",
+    "cumulative_split_factor",
+    "source_available",
+    "qc_status"
+  ],
+  "properties": {
+    "security_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Internal permanent security identifier; the only join key."
+    },
+    "session_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Must be a session in the versioned exchange calendar."
+    },
+    "source": { "type": "string", "minLength": 1 },
+    "dataset_version": { "type": "string", "minLength": 1 },
+    "open": { "type": ["number", "null"] },
+    "high": { "type": ["number", "null"] },
+    "low": { "type": ["number", "null"] },
+    "close": {
+      "type": ["number", "null"],
+      "description": "May be split-adjusted only via cumulative_split_factor."
+    },
+    "raw_close": {
+      "type": ["number", "null"],
+      "description": "Unadjusted exchange print; null only when source_available explains it."
+    },
+    "share_volume": { "type": ["number", "null"], "minimum": 0 },
+    "cumulative_split_factor": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Multiplicative factor making close/raw_close reversible; 1.0 when unadjusted."
+    },
+    "cash_dividend": { "type": ["number", "null"], "minimum": 0 },
+    "corporate_action_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Lineage into the corporate-action table; required whenever a factor or dividend is non-trivial."
+    },
+    "total_return": { "type": ["number", "null"] },
+    "price_return": { "type": ["number", "null"] },
+    "delisting_return": { "type": ["number", "null"] },
+    "delisting_return_type": {
+      "type": ["string", "null"],
+      "enum": [
+        "exchange_final_print",
+        "otc_continuation",
+        "estimated_by_policy",
+        "unknown",
+        null
+      ]
+    },
+    "delisting_policy_version": {
+      "type": ["string", "null"],
+      "description": "Required when delisting_return_type is estimated_by_policy."
+    },
+    "market_cap": { "type": ["number", "null"], "minimum": 0 },
+    "shares_outstanding_source": {
+      "type": ["string", "null"],
+      "enum": ["cover_page", "market_source", "unavailable", null]
+    },
+    "source_available": {
+      "type": "string",
+      "enum": ["present", "absent_in_source", "rejected_by_qc"],
+      "description": "Row-absence is never evidence of no trading."
+    },
+    "qc_status": {
+      "type": "string",
+      "enum": ["pass", "pass_with_warning", "review", "quarantined", "rejected"]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "delisting_return": { "type": "number" } },
+        "required": ["delisting_return"]
+      },
+      "then": {
+        "required": ["delisting_return_type"],
+        "properties": { "delisting_return_type": { "type": "string" } }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "delisting_return_type": { "const": "estimated_by_policy" }
+        },
+        "required": ["delisting_return_type"]
+      },
+      "then": {
+        "required": ["delisting_policy_version"],
+        "properties": { "delisting_policy_version": { "type": "string" } }
+      }
+    }
+  ]
+}
