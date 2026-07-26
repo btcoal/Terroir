@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/us-fundamentals/canonical-data-dictionary.schema.json",
+  "title": "Release 1 canonical data dictionary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dictionary_id",
+    "dictionary_version",
+    "release",
+    "status",
+    "value_convention",
+    "metrics"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "dictionary_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dictionary_version": {
+      "$ref": "#/$defs/semanticVersion"
+    },
+    "release": {
+      "const": "1"
+    },
+    "status": {
+      "const": "frozen"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value_convention": {
+      "const": "reported_value_preserved"
+    },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/metric"
+      }
+    }
+  },
+  "$defs": {
+    "semanticVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "metricId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+    },
+    "nonEmptyUniqueStrings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "metricIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/metricId"
+      }
+    },
+    "formula": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "formula_version",
+        "method",
+        "expression",
+        "required_inputs",
+        "optional_inputs",
+        "constraints"
+      ],
+      "properties": {
+        "formula_version": {
+          "$ref": "#/$defs/semanticVersion"
+        },
+        "method": {
+          "enum": [
+            "direct",
+            "calculation",
+            "rolling",
+            "growth",
+            "ratio"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_inputs": {
+          "$ref": "#/$defs/metricIds"
+        },
+        "optional_inputs": {
+          "$ref": "#/$defs/metricIds"
+        },
+        "constraints": {
+          "$ref": "#/$defs/nonEmptyUniqueStrings"
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "metric_id",
+        "name",
+        "metric_kind",
+        "definition",
+        "statement",
+        "period_type",
+        "unit",
+        "polarity",
+        "dimensional_scope",
+        "industry_applicability",
+        "industry_exclusions",
+        "materiality_tier",
+        "formula",
+        "fallback_rules",
+        "version_added"
+      ],
+      "properties": {
+        "metric_id": {
+          "$ref": "#/$defs/metricId"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metric_kind": {
+          "enum": [
+            "reported",
+            "derived"
+          ]
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "enum": [
+            "cover_page",
+            "balance_sheet",
+            "income_statement",
+            "comprehensive_income_statement",
+            "cash_flow_statement",
+            "shareholders_equity_statement",
+            "non_gaap_disclosure",
+            "derived"
+          ]
+        },
+        "period_type": {
+          "enum": [
+            "instant",
+            "duration"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "monetary",
+            "shares",
+            "monetary_per_share",
+            "ratio"
+          ]
+        },
+        "polarity": {
+          "enum": [
+            "debit",
+            "credit",
+            "mixed",
+            "not_applicable"
+          ]
+        },
+        "dimensional_scope": {
+          "enum": [
+            "consolidated",
+            "consolidated_or_total",
+            "per_security"
+          ]
+        },
+        "industry_applicability": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "const": "all_release_1"
+          }
+        },
+        "industry_exclusions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "materiality_tier": {
+          "enum": [
+            "core",
+            "standard",
+            "supplemental"
+          ]
+        },
+        "formula": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/formula"
+            }
+          ]
+        },
+        "fallback_rules": {
+          "$ref": "#/$defs/nonEmptyUniqueStrings"
+        },
+        "version_added": {
+          "$ref": "#/$defs/semanticVersion"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "metric_kind": {
+                "const": "derived"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "formula": {
+                "$ref": "#/$defs/formula"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

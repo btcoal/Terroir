@@ -1,0 +1,3399 @@
+{
+  "$schema": "../schemas/canonical_data_dictionary.schema.json",
+  "schema_version": 1,
+  "dictionary_id": "us_fundamentals_release_1_metrics",
+  "dictionary_version": "1.0.0",
+  "release": "1",
+  "status": "frozen",
+  "description": "Canonical reported and derived accounting metrics for Release 1 ordinary domestic U.S.-GAAP operating companies.",
+  "value_convention": "reported_value_preserved",
+  "metrics": [
+    {
+      "metric_id": "cash_and_equivalents",
+      "name": "Cash And Equivalents",
+      "metric_kind": "reported",
+      "definition": "Cash and demand deposits available for immediate use, including qualifying cash equivalents.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "restricted_cash",
+      "name": "Restricted Cash",
+      "metric_kind": "reported",
+      "definition": "Cash whose withdrawal or use is contractually or legally restricted.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "short_term_investments",
+      "name": "Short Term Investments",
+      "metric_kind": "reported",
+      "definition": "Marketable investments expected to be realized within the operating cycle or one year.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "accounts_receivable",
+      "name": "Accounts Receivable",
+      "metric_kind": "reported",
+      "definition": "Trade and other accounts receivable, net of reported allowances.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "allowance_for_doubtful_accounts",
+      "name": "Allowance For Doubtful Accounts",
+      "metric_kind": "reported",
+      "definition": "Contra-asset allowance for expected uncollectible receivables.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "supplemental",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "inventory",
+      "name": "Inventory",
+      "metric_kind": "reported",
+      "definition": "Inventories held for sale, production, or consumption in production.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "prepaid_expenses",
+      "name": "Prepaid Expenses",
+      "metric_kind": "reported",
+      "definition": "Current-period cash payments recognized as expense in a future period.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "other_current_assets",
+      "name": "Other Current Assets",
+      "metric_kind": "reported",
+      "definition": "Current assets not represented by another canonical current-asset metric.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "current_assets",
+      "name": "Current Assets",
+      "metric_kind": "reported",
+      "definition": "Total assets expected to be realized, sold, or consumed within the operating cycle or one year.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "property_plant_equipment_gross",
+      "name": "Property Plant Equipment Gross",
+      "metric_kind": "reported",
+      "definition": "Property, plant, and equipment before accumulated depreciation and impairment.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "accumulated_depreciation",
+      "name": "Accumulated Depreciation",
+      "metric_kind": "reported",
+      "definition": "Cumulative depreciation and impairment recognized against property, plant, and equipment.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "property_plant_equipment_net",
+      "name": "Property Plant Equipment Net",
+      "metric_kind": "reported",
+      "definition": "Property, plant, and equipment after accumulated depreciation and impairment.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_lease_assets",
+      "name": "Operating Lease Assets",
+      "metric_kind": "reported",
+      "definition": "Right-of-use assets recognized for operating leases.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "goodwill",
+      "name": "Goodwill",
+      "metric_kind": "reported",
+      "definition": "Goodwill recognized in business combinations, net of impairment.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "intangible_assets",
+      "name": "Intangible Assets",
+      "metric_kind": "reported",
+      "definition": "Identifiable intangible assets other than goodwill, net of amortization and impairment.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "long_term_investments",
+      "name": "Long Term Investments",
+      "metric_kind": "reported",
+      "definition": "Investments classified outside current assets and not consolidated.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "deferred_tax_assets",
+      "name": "Deferred Tax Assets",
+      "metric_kind": "reported",
+      "definition": "Recognized deferred tax assets before any net presentation against deferred tax liabilities when separately reported.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "other_noncurrent_assets",
+      "name": "Other Noncurrent Assets",
+      "metric_kind": "reported",
+      "definition": "Noncurrent assets not represented by another canonical noncurrent-asset metric.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "total_assets",
+      "name": "Total Assets",
+      "metric_kind": "reported",
+      "definition": "Total recognized assets at the statement date.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "accounts_payable",
+      "name": "Accounts Payable",
+      "metric_kind": "reported",
+      "definition": "Amounts owed to suppliers for goods and services received.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "accrued_liabilities",
+      "name": "Accrued Liabilities",
+      "metric_kind": "reported",
+      "definition": "Liabilities for expenses incurred but not yet paid when separately reported.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "other_current_liabilities",
+      "name": "Other Current Liabilities",
+      "metric_kind": "reported",
+      "definition": "Current liabilities not represented by another canonical current-liability metric.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "short_term_debt",
+      "name": "Short Term Debt",
+      "metric_kind": "reported",
+      "definition": "Borrowings due within one year excluding a separately reported current portion of long-term debt.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "current_portion_long_term_debt",
+      "name": "Current Portion Long Term Debt",
+      "metric_kind": "reported",
+      "definition": "Current maturities of debt otherwise classified as long term.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_lease_liabilities_current",
+      "name": "Operating Lease Liabilities Current",
+      "metric_kind": "reported",
+      "definition": "Operating lease obligations due within one year.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "current_liabilities",
+      "name": "Current Liabilities",
+      "metric_kind": "reported",
+      "definition": "Total obligations expected to be settled within the operating cycle or one year.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "long_term_debt",
+      "name": "Long Term Debt",
+      "metric_kind": "reported",
+      "definition": "Interest-bearing borrowings due after one year, excluding current maturities.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "finance_lease_liabilities",
+      "name": "Finance Lease Liabilities",
+      "metric_kind": "reported",
+      "definition": "Total obligations recognized for finance leases when not split into canonical current and noncurrent components.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_lease_liabilities_noncurrent",
+      "name": "Operating Lease Liabilities Noncurrent",
+      "metric_kind": "reported",
+      "definition": "Operating lease obligations due after one year.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "deferred_tax_liabilities",
+      "name": "Deferred Tax Liabilities",
+      "metric_kind": "reported",
+      "definition": "Recognized deferred tax liabilities before any net presentation against deferred tax assets when separately reported.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "other_noncurrent_liabilities",
+      "name": "Other Noncurrent Liabilities",
+      "metric_kind": "reported",
+      "definition": "Noncurrent liabilities not represented by another canonical noncurrent-liability metric.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "total_liabilities",
+      "name": "Total Liabilities",
+      "metric_kind": "reported",
+      "definition": "Total recognized liabilities at the statement date.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "preferred_equity",
+      "name": "Preferred Equity",
+      "metric_kind": "reported",
+      "definition": "Permanent equity attributable to preferred shareholders, excluding redeemable preferred instruments classified outside permanent equity.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "redeemable_preferred_equity",
+      "name": "Redeemable Preferred Equity",
+      "metric_kind": "reported",
+      "definition": "Preferred equity redeemable for cash or other assets and classified outside permanent equity.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "temporary_equity",
+      "name": "Temporary Equity",
+      "metric_kind": "reported",
+      "definition": "Mezzanine equity instruments subject to redemption or other conditions requiring classification outside permanent equity.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "common_equity",
+      "name": "Common Equity",
+      "metric_kind": "reported",
+      "definition": "Equity attributable to common shareholders after preferred claims and excluding noncontrolling interests.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "stockholders_equity",
+      "name": "Stockholders Equity",
+      "metric_kind": "reported",
+      "definition": "Permanent equity attributable to the parent entity, including preferred equity when present and excluding noncontrolling interests.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "retained_earnings",
+      "name": "Retained Earnings",
+      "metric_kind": "reported",
+      "definition": "Cumulative earnings retained in the business, including an accumulated deficit when negative.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "accumulated_other_comprehensive_income",
+      "name": "Accumulated Other Comprehensive Income",
+      "metric_kind": "reported",
+      "definition": "Cumulative other comprehensive income or loss included in equity.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "treasury_stock",
+      "name": "Treasury Stock",
+      "metric_kind": "reported",
+      "definition": "Cost or stated value of the entity's own shares held in treasury as a contra-equity balance.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "noncontrolling_interest",
+      "name": "Noncontrolling Interest",
+      "metric_kind": "reported",
+      "definition": "Permanent equity in consolidated subsidiaries attributable to owners other than the parent.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "redeemable_noncontrolling_interest",
+      "name": "Redeemable Noncontrolling Interest",
+      "metric_kind": "reported",
+      "definition": "Noncontrolling interests redeemable for cash or other assets and classified outside permanent equity.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "total_equity",
+      "name": "Total Equity",
+      "metric_kind": "reported",
+      "definition": "Total permanent equity including parent stockholders' equity and noncontrolling interests, but excluding temporary equity.",
+      "statement": "balance_sheet",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "revenue",
+      "name": "Revenue",
+      "metric_kind": "reported",
+      "definition": "Revenue recognized from ordinary activities before costs and expenses.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "cost_of_revenue",
+      "name": "Cost Of Revenue",
+      "metric_kind": "reported",
+      "definition": "Direct costs attributable to goods or services that generated revenue.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "gross_profit",
+      "name": "Gross Profit",
+      "metric_kind": "reported",
+      "definition": "Revenue less cost of revenue on the filing's reported presentation.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "research_and_development",
+      "name": "Research And Development",
+      "metric_kind": "reported",
+      "definition": "Research and development expense recognized during the period.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "selling_and_marketing",
+      "name": "Selling And Marketing",
+      "metric_kind": "reported",
+      "definition": "Selling, advertising, and marketing expense when separately reported.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "general_and_administrative",
+      "name": "General And Administrative",
+      "metric_kind": "reported",
+      "definition": "General and administrative expense when separately reported.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "selling_general_administrative",
+      "name": "Selling General Administrative",
+      "metric_kind": "reported",
+      "definition": "Combined selling, general, and administrative expense as reported.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "depreciation",
+      "name": "Depreciation",
+      "metric_kind": "reported",
+      "definition": "Depreciation expense recognized for tangible depreciable assets.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "amortization",
+      "name": "Amortization",
+      "metric_kind": "reported",
+      "definition": "Amortization expense recognized for intangible and other amortizable assets.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "depreciation_and_amortization",
+      "name": "Depreciation And Amortization",
+      "metric_kind": "reported",
+      "definition": "Combined depreciation and amortization expense recognized in earnings.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "restructuring_expense",
+      "name": "Restructuring Expense",
+      "metric_kind": "reported",
+      "definition": "Costs recognized for an approved restructuring or exit activity.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "supplemental",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_expenses",
+      "name": "Operating Expenses",
+      "metric_kind": "reported",
+      "definition": "Total operating expenses, including cost of revenue only when that is the issuer's stated presentation.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_income",
+      "name": "Operating Income",
+      "metric_kind": "reported",
+      "definition": "Income from operations before nonoperating items and income taxes.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "interest_expense",
+      "name": "Interest Expense",
+      "metric_kind": "reported",
+      "definition": "Interest cost recognized in earnings, net only when the filing presents it net.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "interest_income",
+      "name": "Interest Income",
+      "metric_kind": "reported",
+      "definition": "Interest income recognized in earnings when separately reported.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "nonoperating_income",
+      "name": "Nonoperating Income",
+      "metric_kind": "reported",
+      "definition": "Net nonoperating income or expense excluding separately captured interest when the presentation permits.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "pretax_income",
+      "name": "Pretax Income",
+      "metric_kind": "reported",
+      "definition": "Income or loss from continuing and discontinued operations before income taxes, following the filing's reported scope.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "income_tax",
+      "name": "Income Tax",
+      "metric_kind": "reported",
+      "definition": "Income tax expense or benefit recognized for the period.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "income_from_continuing_operations",
+      "name": "Income From Continuing Operations",
+      "metric_kind": "reported",
+      "definition": "Income or loss after tax attributable to operations that remain continuing under the filing's accounting basis.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "income_from_discontinued_operations",
+      "name": "Income From Discontinued Operations",
+      "metric_kind": "reported",
+      "definition": "Income or loss after tax from components classified as discontinued operations.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_income_total",
+      "name": "Net Income Total",
+      "metric_kind": "reported",
+      "definition": "Consolidated net income or loss before attribution between parent and noncontrolling interests.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_income_attributable_to_parent",
+      "name": "Net Income Attributable To Parent",
+      "metric_kind": "reported",
+      "definition": "Net income or loss attributable to the parent entity's shareholders.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_income_attributable_to_noncontrolling_interests",
+      "name": "Net Income Attributable To Noncontrolling Interests",
+      "metric_kind": "reported",
+      "definition": "Net income or loss attributable to noncontrolling interests.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "preferred_dividends",
+      "name": "Preferred Dividends",
+      "metric_kind": "reported",
+      "definition": "Dividends declared or accreted for preferred shareholders that reduce income available to common shareholders.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_income_common",
+      "name": "Net Income Common",
+      "metric_kind": "reported",
+      "definition": "Net income or loss attributable to common shareholders after preferred claims.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "basic_eps",
+      "name": "Basic EPS",
+      "metric_kind": "reported",
+      "definition": "Basic earnings per common share for the reported period.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary_per_share",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "diluted_eps",
+      "name": "Diluted EPS",
+      "metric_kind": "reported",
+      "definition": "Diluted earnings per common share for the reported period.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary_per_share",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "basic_weighted_average_shares",
+      "name": "Basic Weighted Average Shares",
+      "metric_kind": "reported",
+      "definition": "Weighted-average common shares used in basic earnings per share.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "shares",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "diluted_weighted_average_shares",
+      "name": "Diluted Weighted Average Shares",
+      "metric_kind": "reported",
+      "definition": "Weighted-average common and dilutive potential shares used in diluted earnings per share.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "shares",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "common_dividends_per_share",
+      "name": "Common Dividends Per Share",
+      "metric_kind": "reported",
+      "definition": "Dividends declared per common share for the reported period.",
+      "statement": "income_statement",
+      "period_type": "duration",
+      "unit": "monetary_per_share",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "comprehensive_income",
+      "name": "Comprehensive Income",
+      "metric_kind": "reported",
+      "definition": "Total consolidated comprehensive income or loss before attribution.",
+      "statement": "comprehensive_income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "comprehensive_income_attributable_to_parent",
+      "name": "Comprehensive Income Attributable To Parent",
+      "metric_kind": "reported",
+      "definition": "Comprehensive income or loss attributable to the parent entity.",
+      "statement": "comprehensive_income_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_cash_flow",
+      "name": "Operating Cash Flow",
+      "metric_kind": "reported",
+      "definition": "Net cash provided by or used in operating activities.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "capital_expenditures",
+      "name": "Capital Expenditures",
+      "metric_kind": "reported",
+      "definition": "Cash paid to acquire property, plant, equipment, and qualifying capitalized productive assets.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "acquisitions",
+      "name": "Acquisitions",
+      "metric_kind": "reported",
+      "definition": "Cash consideration paid for business acquisitions, net of cash acquired when reported net.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "asset_disposals",
+      "name": "Asset Disposals",
+      "metric_kind": "reported",
+      "definition": "Cash proceeds from disposals of property, businesses, or other long-lived assets.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "investing_cash_flow",
+      "name": "Investing Cash Flow",
+      "metric_kind": "reported",
+      "definition": "Net cash provided by or used in investing activities.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "debt_issuance",
+      "name": "Debt Issuance",
+      "metric_kind": "reported",
+      "definition": "Cash proceeds from issuing short- and long-term debt.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "debt_repayment",
+      "name": "Debt Repayment",
+      "metric_kind": "reported",
+      "definition": "Cash paid to repay principal on short- and long-term debt.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "share_issuance",
+      "name": "Share Issuance",
+      "metric_kind": "reported",
+      "definition": "Cash proceeds from issuing common shares and related equity instruments.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "share_repurchases",
+      "name": "Share Repurchases",
+      "metric_kind": "reported",
+      "definition": "Cash paid to repurchase common shares and related equity instruments.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "dividends_paid",
+      "name": "Dividends Paid",
+      "metric_kind": "reported",
+      "definition": "Cash dividends paid to common and preferred shareholders.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "financing_cash_flow",
+      "name": "Financing Cash Flow",
+      "metric_kind": "reported",
+      "definition": "Net cash provided by or used in financing activities.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "depreciation_and_amortization_cash_flow_addback",
+      "name": "Depreciation And Amortization Cash Flow Addback",
+      "metric_kind": "reported",
+      "definition": "Depreciation and amortization added back in reconciling earnings to operating cash flow.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "stock_based_compensation",
+      "name": "Stock Based Compensation",
+      "metric_kind": "reported",
+      "definition": "Noncash share-based compensation included in the operating cash-flow reconciliation.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "deferred_taxes_cash_flow",
+      "name": "Deferred Taxes Cash Flow",
+      "metric_kind": "reported",
+      "definition": "Deferred income tax expense or benefit included in the operating cash-flow reconciliation.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "working_capital_adjustments",
+      "name": "Working Capital Adjustments",
+      "metric_kind": "reported",
+      "definition": "Net operating cash-flow reconciliation adjustments attributable to changes in operating assets and liabilities.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "effect_exchange_rate_on_cash",
+      "name": "Effect Exchange Rate On Cash",
+      "metric_kind": "reported",
+      "definition": "Effect of exchange-rate changes on cash, cash equivalents, and restricted cash.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "supplemental",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_change_in_cash",
+      "name": "Net Change In Cash",
+      "metric_kind": "reported",
+      "definition": "Net increase or decrease in cash, cash equivalents, and restricted cash during the period.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "mixed",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "cash_interest_paid",
+      "name": "Cash Interest Paid",
+      "metric_kind": "reported",
+      "definition": "Cash paid for interest during the period.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "supplemental",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "cash_taxes_paid",
+      "name": "Cash Taxes Paid",
+      "metric_kind": "reported",
+      "definition": "Cash paid for income taxes during the period.",
+      "statement": "cash_flow_statement",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "debit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "supplemental",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "shares_outstanding",
+      "name": "Shares Outstanding",
+      "metric_kind": "reported",
+      "definition": "Issued common shares outstanding for a specific security class at the measurement date.",
+      "statement": "cover_page",
+      "period_type": "instant",
+      "unit": "shares",
+      "polarity": "not_applicable",
+      "dimensional_scope": "per_security",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": null,
+      "fallback_rules": [
+        "Use the highest-priority approved direct fact with compatible period, unit, statement role, and dimensions.",
+        "If no compatible direct fact exists, publish no observation; do not reconstruct or impute this metric."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "total_debt",
+      "name": "Total Debt",
+      "metric_kind": "derived",
+      "definition": "Interest-bearing debt plus recognized finance-lease obligations at the statement date.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "COALESCE(short_term_debt, 0) + COALESCE(current_portion_long_term_debt, 0) + COALESCE(long_term_debt, 0) + COALESCE(finance_lease_liabilities, 0)",
+        "required_inputs": [],
+        "optional_inputs": [
+          "short_term_debt",
+          "current_portion_long_term_debt",
+          "long_term_debt",
+          "finance_lease_liabilities"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Require at least one compatible debt component and treat only valid absence of another component as zero.",
+        "Reject a candidate when a broader debt fact overlaps selected components and cannot be de-duplicated deterministically."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_debt",
+      "name": "Net Debt",
+      "metric_kind": "derived",
+      "definition": "Total debt less cash and cash-like short-term investments.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "total_debt - cash_and_equivalents - COALESCE(short_term_investments, 0)",
+        "required_inputs": [
+          "total_debt",
+          "cash_and_equivalents"
+        ],
+        "optional_inputs": [
+          "short_term_investments"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "free_cash_flow",
+      "name": "Free Cash Flow",
+      "metric_kind": "derived",
+      "definition": "Operating cash flow less capital expenditures for the same compatible period.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "operating_cash_flow - capital_expenditures",
+        "required_inputs": [
+          "operating_cash_flow",
+          "capital_expenditures"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "ttm_revenue",
+      "name": "TTM Revenue",
+      "metric_kind": "derived",
+      "definition": "Revenue for the trailing four compatible fiscal quarters ending at the observation period.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "rolling",
+        "expression": "TTM(revenue, 4)",
+        "required_inputs": [
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "ttm_net_income",
+      "name": "TTM Net Income",
+      "metric_kind": "derived",
+      "definition": "Consolidated net income for the trailing four compatible fiscal quarters.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "rolling",
+        "expression": "TTM(net_income_total, 4)",
+        "required_inputs": [
+          "net_income_total"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "ttm_operating_cash_flow",
+      "name": "TTM Operating Cash Flow",
+      "metric_kind": "derived",
+      "definition": "Operating cash flow for the trailing four compatible fiscal quarters.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "rolling",
+        "expression": "TTM(operating_cash_flow, 4)",
+        "required_inputs": [
+          "operating_cash_flow"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "book_equity_reported",
+      "name": "Book Equity Reported",
+      "metric_kind": "derived",
+      "definition": "Best available reported equity attributable to the parent before canonical preferred-equity adjustments.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "COALESCE(stockholders_equity, common_equity, total_equity - COALESCE(noncontrolling_interest, 0), total_assets - total_liabilities - COALESCE(noncontrolling_interest, 0) - COALESCE(temporary_equity, 0))",
+        "required_inputs": [],
+        "optional_inputs": [
+          "stockholders_equity",
+          "common_equity",
+          "total_equity",
+          "total_assets",
+          "total_liabilities",
+          "noncontrolling_interest",
+          "temporary_equity"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Prefer a compatible direct stockholders-equity fact, then direct common equity, then total equity less noncontrolling interest.",
+        "Use the assets-minus-liabilities reconstruction only when direct parent-equity facts are absent and temporary and noncontrolling interests are resolved."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "book_equity_common",
+      "name": "Book Equity Common",
+      "metric_kind": "derived",
+      "definition": "Book equity attributable to common shareholders after permanent and redeemable preferred claims.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "book_equity_reported - PREFERRED_EQUITY_NOT_ALREADY_EXCLUDED(preferred_equity, redeemable_preferred_equity)",
+        "required_inputs": [
+          "book_equity_reported"
+        ],
+        "optional_inputs": [
+          "preferred_equity",
+          "redeemable_preferred_equity"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Subtract each compatible preferred-equity class exactly once; valid absence may be treated as zero.",
+        "Do not subtract preferred equity when the selected book_equity_reported source is explicitly common-only."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "book_equity_fama_french",
+      "name": "Book Equity Fama French",
+      "metric_kind": "derived",
+      "definition": "Fama-French-style book equity: parent stockholders' equity plus compatible deferred-tax balance, less preferred equity.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "book_equity_common + COALESCE(deferred_tax_liabilities, 0)",
+        "required_inputs": [
+          "book_equity_common"
+        ],
+        "optional_inputs": [
+          "deferred_tax_liabilities"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Use deferred-tax liabilities only when separately reported on a compatible consolidated basis; otherwise omit the adjustment and record that fallback.",
+        "Apply the preferred-equity hierarchy once and retain the selected components in formula lineage."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "tangible_common_equity",
+      "name": "Tangible Common Equity",
+      "metric_kind": "derived",
+      "definition": "Common book equity less goodwill and identifiable intangible assets.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "book_equity_common - COALESCE(goodwill, 0) - COALESCE(intangible_assets, 0)",
+        "required_inputs": [
+          "book_equity_common"
+        ],
+        "optional_inputs": [
+          "goodwill",
+          "intangible_assets"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "gross_profitability",
+      "name": "Gross Profitability",
+      "metric_kind": "derived",
+      "definition": "Gross profit divided by average total assets for the compatible measurement interval.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "gross_profit / AVG(total_assets)",
+        "required_inputs": [
+          "gross_profit",
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_profitability",
+      "name": "Operating Profitability",
+      "metric_kind": "derived",
+      "definition": "Revenue less cost of revenue, SG&A, and interest expense, divided by common book equity.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "(revenue - cost_of_revenue - selling_general_administrative - COALESCE(interest_expense, 0)) / book_equity_common",
+        "required_inputs": [
+          "revenue",
+          "cost_of_revenue",
+          "selling_general_administrative",
+          "book_equity_common"
+        ],
+        "optional_inputs": [
+          "interest_expense"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "return_on_assets",
+      "name": "Return On Assets",
+      "metric_kind": "derived",
+      "definition": "Parent-attributable net income divided by average total assets.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "net_income_attributable_to_parent / AVG(total_assets)",
+        "required_inputs": [
+          "net_income_attributable_to_parent",
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "return_on_equity",
+      "name": "Return On Equity",
+      "metric_kind": "derived",
+      "definition": "Common-shareholder net income divided by average common book equity.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "net_income_common / AVG(book_equity_common)",
+        "required_inputs": [
+          "net_income_common",
+          "book_equity_common"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "gross_margin",
+      "name": "Gross Margin",
+      "metric_kind": "derived",
+      "definition": "Gross profit divided by revenue.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "gross_profit / revenue",
+        "required_inputs": [
+          "gross_profit",
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "operating_margin",
+      "name": "Operating Margin",
+      "metric_kind": "derived",
+      "definition": "Operating income divided by revenue.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "operating_income / revenue",
+        "required_inputs": [
+          "operating_income",
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_margin",
+      "name": "Net Margin",
+      "metric_kind": "derived",
+      "definition": "Parent-attributable net income divided by revenue.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "net_income_attributable_to_parent / revenue",
+        "required_inputs": [
+          "net_income_attributable_to_parent",
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "accruals",
+      "name": "Accruals",
+      "metric_kind": "derived",
+      "definition": "Consolidated net income less operating cash flow, scaled by average total assets.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "(net_income_total - operating_cash_flow) / AVG(total_assets)",
+        "required_inputs": [
+          "net_income_total",
+          "operating_cash_flow",
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "asset_growth",
+      "name": "Asset Growth",
+      "metric_kind": "derived",
+      "definition": "Percentage change in total assets from the immediately preceding comparable fiscal-year period.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "growth",
+        "expression": "total_assets / LAG(total_assets, 1Y) - 1",
+        "required_inputs": [
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "investment_growth",
+      "name": "Investment Growth",
+      "metric_kind": "derived",
+      "definition": "Net real investment, measured as capital expenditures less the cash-flow depreciation addback, scaled by lagged assets.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "growth",
+        "expression": "(capital_expenditures - depreciation_and_amortization_cash_flow_addback) / LAG(total_assets, 1Y)",
+        "required_inputs": [
+          "capital_expenditures",
+          "depreciation_and_amortization_cash_flow_addback",
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "sales_growth",
+      "name": "Sales Growth",
+      "metric_kind": "derived",
+      "definition": "Percentage change in revenue from the immediately preceding comparable fiscal-year period.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "growth",
+        "expression": "revenue / LAG(revenue, 1Y) - 1",
+        "required_inputs": [
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "earnings_growth",
+      "name": "Earnings Growth",
+      "metric_kind": "derived",
+      "definition": "Percentage change in common-shareholder net income from the immediately preceding comparable fiscal-year period.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "growth",
+        "expression": "net_income_common / LAG(net_income_common, 1Y) - 1",
+        "required_inputs": [
+          "net_income_common"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "research_and_development_intensity",
+      "name": "Research And Development Intensity",
+      "metric_kind": "derived",
+      "definition": "Research and development expense divided by revenue.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "research_and_development / revenue",
+        "required_inputs": [
+          "research_and_development",
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "capital_expenditure_intensity",
+      "name": "Capital Expenditure Intensity",
+      "metric_kind": "derived",
+      "definition": "Capital expenditures divided by revenue.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "capital_expenditures / revenue",
+        "required_inputs": [
+          "capital_expenditures",
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "stock_based_compensation_intensity",
+      "name": "Stock Based Compensation Intensity",
+      "metric_kind": "derived",
+      "definition": "Stock-based compensation divided by revenue.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "stock_based_compensation / revenue",
+        "required_inputs": [
+          "stock_based_compensation",
+          "revenue"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "net_equity_issuance",
+      "name": "Net Equity Issuance",
+      "metric_kind": "derived",
+      "definition": "Cash proceeds from share issuance less cash paid for share repurchases.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "share_issuance - share_repurchases",
+        "required_inputs": [
+          "share_issuance",
+          "share_repurchases"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "leverage",
+      "name": "Leverage",
+      "metric_kind": "derived",
+      "definition": "Total debt divided by total assets.",
+      "statement": "derived",
+      "period_type": "instant",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "total_debt / total_assets",
+        "required_inputs": [
+          "total_debt",
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "cash_flow_to_assets",
+      "name": "Cash Flow To Assets",
+      "metric_kind": "derived",
+      "definition": "Operating cash flow divided by average total assets.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "operating_cash_flow / AVG(total_assets)",
+        "required_inputs": [
+          "operating_cash_flow",
+          "total_assets"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "dividend_payout",
+      "name": "Dividend Payout",
+      "metric_kind": "derived",
+      "definition": "Absolute cash dividends paid divided by common-shareholder net income when the denominator is positive.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "ratio",
+        "expression": "ABS(dividends_paid) / net_income_common",
+        "required_inputs": [
+          "dividends_paid",
+          "net_income_common"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Publish only when compatible common-shareholder net income is positive and nonzero.",
+        "Do not substitute total distributions or market-value payout measures for this accounting payout ratio."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "diluted_share_growth",
+      "name": "Diluted Share Growth",
+      "metric_kind": "derived",
+      "definition": "Percentage change in diluted weighted-average shares from the immediately preceding comparable fiscal-year period.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "ratio",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "growth",
+        "expression": "diluted_weighted_average_shares / LAG(diluted_weighted_average_shares, 1Y) - 1",
+        "required_inputs": [
+          "diluted_weighted_average_shares"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Calculate only when all required inputs pass their formula QC thresholds and satisfy every compatibility constraint.",
+        "If a required compatible input is absent, publish no value; do not impute or cross accounting bases."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "ebitda_reported",
+      "name": "EBITDA Reported",
+      "metric_kind": "reported",
+      "definition": "EBITDA explicitly reported by the issuer under its stated non-GAAP definition, without canonical reconstruction or adjustment.",
+      "statement": "non_gaap_disclosure",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "credit",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "direct",
+        "expression": "DIRECT_REPORTED_VALUE",
+        "required_inputs": [],
+        "optional_inputs": [],
+        "constraints": [
+          "issuer_definition_retained",
+          "source_label_retained",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Use only an explicitly reported issuer value with its definition and reconciliation provenance.",
+        "Never substitute ebitda_reconstructed or ebitda_before_stock_comp when a reported value is absent."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "ebitda_reconstructed",
+      "name": "EBITDA Reconstructed",
+      "metric_kind": "derived",
+      "definition": "Canonical reconstruction of EBITDA from operating income plus compatible depreciation and amortization expense.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "core",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "operating_income + COALESCE(depreciation_and_amortization, depreciation + amortization)",
+        "required_inputs": [
+          "operating_income"
+        ],
+        "optional_inputs": [
+          "depreciation_and_amortization",
+          "depreciation",
+          "amortization"
+        ],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Prefer combined depreciation_and_amortization; otherwise require both separate depreciation and amortization inputs.",
+        "Never substitute ebitda_reported, and publish no reconstruction when compatible depreciation and amortization are unavailable."
+      ],
+      "version_added": "1.0.0"
+    },
+    {
+      "metric_id": "ebitda_before_stock_comp",
+      "name": "EBITDA Before Stock Comp",
+      "metric_kind": "derived",
+      "definition": "Reconstructed EBITDA before stock-based compensation expense.",
+      "statement": "derived",
+      "period_type": "duration",
+      "unit": "monetary",
+      "polarity": "not_applicable",
+      "dimensional_scope": "consolidated",
+      "industry_applicability": [
+        "all_release_1"
+      ],
+      "industry_exclusions": [],
+      "materiality_tier": "standard",
+      "formula": {
+        "formula_version": "1.0.0",
+        "method": "calculation",
+        "expression": "ebitda_reconstructed + stock_based_compensation",
+        "required_inputs": [
+          "ebitda_reconstructed",
+          "stock_based_compensation"
+        ],
+        "optional_inputs": [],
+        "constraints": [
+          "same_entity",
+          "same_currency",
+          "same_dimensional_scope",
+          "compatible_fiscal_period",
+          "compatible_comparability_basis",
+          "inputs_available_at_or_before_output"
+        ]
+      },
+      "fallback_rules": [
+        "Require canonical reconstructed EBITDA and compatible stock-based compensation for the same period.",
+        "Never substitute an issuer-reported adjusted EBITDA whose adjustment set is not identical."
+      ],
+      "version_added": "1.0.0"
+    }
+  ]
+}
