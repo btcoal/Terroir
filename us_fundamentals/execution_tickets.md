@@ -102,7 +102,7 @@ gates.
 | Ticket | Priority / size | Depends on | Status |
 | --- | --- | --- | --- |
 | [UF-001 — Freeze the Release 1 charter and issuer universe](tickets/UF-001.md) | P0 / M | None | Done ✅ · [PR #1](https://github.com/btcoal/Terroir/pull/1) |
-| [UF-002 — Publish the versioned canonical data dictionary](tickets/UF-002.md) | P0 / L | UF-001 | — |
+| [UF-002 — Publish the versioned canonical data dictionary](tickets/UF-002.md) | P0 / L | UF-001 | Done ✅ · [PR #3](https://github.com/btcoal/Terroir/pull/3) |
 | [UF-003 — Specify information availability and execution-time policies](tickets/UF-003.md) | P0 / M | UF-001 | — |
 | [UF-004 — Define the fundamentals-to-returns and identifier contracts](tickets/UF-004.md) | P0 / M | UF-001 | — |
 | [UF-005 — Record architecture decisions and recalibrate the backlog](tickets/UF-005.md) | P0 / M | UF-001, UF-002, UF-003, UF-004 | — |
