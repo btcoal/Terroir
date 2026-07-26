@@ -1,0 +1,103 @@
+{
+  "$schema": "../schemas/release_1_issuer_universe.schema.json",
+  "schema_version": 1,
+  "policy_id": "us_fundamentals_release_1",
+  "policy_version": "1.0.0",
+  "release": "1",
+  "status": "frozen",
+  "filing_start": {
+    "field": "sec_acceptance_datetime",
+    "operator": "on_or_after",
+    "value": "2010-01-01T00:00:00-05:00"
+  },
+  "required_eligibility_fields": [
+    "accession",
+    "form",
+    "accounting_standard",
+    "registrant_type",
+    "issuer_type",
+    "sec_acceptance_datetime"
+  ],
+  "supported_forms": [
+    "10-K",
+    "10-Q",
+    "10-K/A",
+    "10-Q/A"
+  ],
+  "accounting_standards": {
+    "included": [
+      "US-GAAP"
+    ],
+    "recognized_unsupported": [
+      "IFRS",
+      "OTHER"
+    ]
+  },
+  "registrant_types": {
+    "included": [
+      "domestic"
+    ],
+    "recognized_unsupported": [
+      "foreign_private_issuer"
+    ],
+    "indeterminate": "unknown"
+  },
+  "issuer_types": {
+    "included": [
+      "operating_company"
+    ],
+    "recognized_unsupported": [
+      "bank",
+      "insurer",
+      "reit",
+      "utility",
+      "investment_company",
+      "business_development_company",
+      "shell_company",
+      "asset_backed_issuer",
+      "other_specialized_registrant"
+    ],
+    "indeterminate": "unknown"
+  },
+  "ingestion": {
+    "eligibility_is_independent": true,
+    "default_status": "not_recorded",
+    "statuses": [
+      "not_recorded",
+      "not_attempted",
+      "acquired",
+      "retry_pending",
+      "terminal_failure",
+      "unavailable_upstream"
+    ]
+  },
+  "release_scope": {
+    "included_sources": [
+      "cover_page",
+      "balance_sheet",
+      "income_statement",
+      "comprehensive_income_statement",
+      "cash_flow_statement",
+      "shareholders_equity_statement"
+    ],
+    "explicitly_excluded": [
+      "detailed_footnotes",
+      "segment_schedules",
+      "geographic_schedules",
+      "lease_schedules",
+      "debt_maturity_schedules",
+      "pension_tables",
+      "tax_footnotes",
+      "unstructured_text_extraction",
+      "market_prices_and_returns",
+      "point_in_time_fx_conversion",
+      "imputation"
+    ]
+  },
+  "metric_supported_start_policy": {
+    "default": "inherit_release_filing_start",
+    "later_start_allowed": true,
+    "requires_empirical_quality_evidence": true,
+    "requires_policy_version_increment": true
+  }
+}
