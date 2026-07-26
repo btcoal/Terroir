@@ -111,9 +111,9 @@ def _columnar_filings(cik: int, block: dict[str, Any]) -> Any:
         if form not in TARGET_FORMS:
             continue
 
-        def col(key: str) -> Any:
+        def col(key: str, index: int = i) -> Any:
             values = block.get(key, [])
-            return values[i] if i < len(values) else None
+            return values[index] if index < len(values) else None
 
         yield {
             "accession": col("accessionNumber"),
