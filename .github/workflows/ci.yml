@@ -39,12 +39,11 @@ jobs:
       - run: uv run python -m us_fundamentals.jobs.minimal_pipeline
 
   pit-leakage:
-    # UF-015 wires the PIT metamorphic harness into this job; it is a
-    # dedicated hard failure with a required violation count of zero.
+    # UF-015 PIT metamorphic harness: a dedicated hard failure with a
+    # required violation count of zero. Never made conditional.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v4
       - run: uv sync --frozen
       - run: uv run pytest tests/test_pit_harness.py -q
-        if: ${{ hashFiles('us_fundamentals/tests/test_pit_harness.py') != '' }}

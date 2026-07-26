@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "description": "Synthetic UF-015 corpus. E1: calendar filer with original, nonfinancial amendment, financial amendment, later restated comparative, future filing, mapping re-release. E2: 52/53-week retailer with fiscal-year change, transition stub, YTD rows on incompatible bases. E3: dual share class, ticker change, delisting.",
+  "mapping_releases": [
+    {"mapping_version": "map-1.0", "information_available_at": "2012-06-01T09:00:00-04:00"},
+    {"mapping_version": "map-2.0", "information_available_at": "2015-01-05T09:00:00-05:00"}
+  ],
+  "observations": [
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-2013Q1-YTD", "period_kind": "ytd", "value": 10.0, "accession": "E1-10Q-2013Q1", "information_available_at": "2013-05-08T16:32:00-04:00", "mapping_version": "map-1.0", "comparability_basis_id": "E1-b1", "category": "original_filing_ytd"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-FY2013", "period_kind": "fiscal_year", "value": 100.0, "accession": "E1-10K-FY2013", "information_available_at": "2014-02-20T17:05:00-05:00", "mapping_version": "map-1.0", "comparability_basis_id": "E1-b1", "category": "original_filing"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-FY2013", "period_kind": "fiscal_year", "value": 105.0, "accession": "E1-10KA-FY2013-FIN", "information_available_at": "2014-06-10T09:15:00-04:00", "mapping_version": "map-1.0", "comparability_basis_id": "E1-b1", "category": "financial_amendment"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-2013Q1-YTD", "period_kind": "ytd", "value": 11.0, "accession": "E1-10Q-2013Q1", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E1-b1", "category": "mapping_version_change"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-FY2013", "period_kind": "fiscal_year", "value": 106.0, "accession": "E1-10KA-FY2013-FIN", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E1-b1", "category": "mapping_version_change"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-FY2014", "period_kind": "fiscal_year", "value": 200.0, "accession": "E1-10K-FY2014", "information_available_at": "2015-02-25T16:45:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E1-b2", "category": "original_filing"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-FY2013", "period_kind": "fiscal_year", "value": 102.0, "accession": "E1-10K-FY2014", "information_available_at": "2015-02-25T16:45:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E1-b2", "category": "later_comparative_restatement"},
+    {"entity_id": "E1", "security_id": "S1", "metric_id": "net_income_total", "fiscal_period_id": "E1-FY2015", "period_kind": "fiscal_year", "value": 300.0, "accession": "E1-10K-FY2015", "information_available_at": "2016-02-24T17:20:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E1-b2", "category": "future_filing"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-FY2013W53", "period_kind": "fiscal_year_53_week", "value": 500.0, "accession": "E2-10K-FY2013", "information_available_at": "2014-04-01T08:30:00-04:00", "mapping_version": "map-1.0", "comparability_basis_id": "E2-b1", "category": "fifty_two_fifty_three_week"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-TP2014", "period_kind": "transition_period", "value": 120.0, "accession": "E2-10KT-TP2014", "information_available_at": "2014-08-15T12:00:00-04:00", "mapping_version": "map-1.0", "comparability_basis_id": "E2-b1", "category": "fiscal_year_change_transition_stub"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-FY2015", "period_kind": "fiscal_year", "value": 620.0, "accession": "E2-10K-FY2015", "information_available_at": "2015-08-20T16:50:00-04:00", "mapping_version": "map-2.0", "comparability_basis_id": "E2-b2", "category": "fiscal_year_change_new_calendar"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-FY2015Q1", "period_kind": "quarter", "value": 150.0, "accession": "E2-10Q-FY2015Q1", "information_available_at": "2014-11-10T09:00:00-05:00", "mapping_version": "map-1.0", "comparability_basis_id": "E2-b1", "category": "incompatible_basis_member"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-FY2015H1", "period_kind": "ytd", "value": 320.0, "accession": "E2-10Q-FY2015Q2", "information_available_at": "2015-02-10T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E2-b2", "category": "incompatible_basis_member"},
+    {"entity_id": "E3", "security_id": "S3A", "metric_id": "eps_diluted", "fiscal_period_id": "E3-FY2013", "period_kind": "fiscal_year", "value": 1.25, "accession": "E3-10K-FY2013", "information_available_at": "2014-02-28T16:10:00-05:00", "mapping_version": "map-1.0", "comparability_basis_id": "E3-b1", "category": "multiple_share_classes"},
+    {"entity_id": "E3", "security_id": "S3B", "metric_id": "eps_diluted", "fiscal_period_id": "E3-FY2013-B", "period_kind": "fiscal_year", "value": 0.125, "accession": "E3-10K-FY2013", "information_available_at": "2014-02-28T16:10:00-05:00", "mapping_version": "map-1.0", "comparability_basis_id": "E3-b1", "category": "multiple_share_classes"},
+    {"entity_id": "E3", "security_id": "S3A", "metric_id": "eps_diluted", "fiscal_period_id": "E3-FY2014", "period_kind": "fiscal_year", "value": 1.4, "accession": "E3-10K-FY2014", "information_available_at": "2015-02-27T16:40:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E3-b1", "category": "pre_delisting_filing"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-FY2013W53", "period_kind": "fiscal_year_53_week", "value": 500.0, "accession": "E2-10K-FY2013", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E2-b1", "category": "mapping_rerelease_carryforward"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-TP2014", "period_kind": "transition_period", "value": 120.0, "accession": "E2-10KT-TP2014", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E2-b1", "category": "mapping_rerelease_carryforward"},
+    {"entity_id": "E2", "security_id": "S2", "metric_id": "revenue", "fiscal_period_id": "E2-FY2015Q1", "period_kind": "quarter", "value": 150.0, "accession": "E2-10Q-FY2015Q1", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E2-b1", "category": "mapping_rerelease_carryforward"},
+    {"entity_id": "E3", "security_id": "S3A", "metric_id": "eps_diluted", "fiscal_period_id": "E3-FY2013", "period_kind": "fiscal_year", "value": 1.25, "accession": "E3-10K-FY2013", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E3-b1", "category": "mapping_rerelease_carryforward"},
+    {"entity_id": "E3", "security_id": "S3B", "metric_id": "eps_diluted", "fiscal_period_id": "E3-FY2013-B", "period_kind": "fiscal_year", "value": 0.125, "accession": "E3-10K-FY2013", "information_available_at": "2015-01-05T09:00:00-05:00", "mapping_version": "map-2.0", "comparability_basis_id": "E3-b1", "category": "mapping_rerelease_carryforward"}
+  ],
+  "nonfinancial_amendments": [
+    {"accession": "E1-10KA-FY2013-PARTIII", "amends": "E1-10K-FY2013", "information_available_at": "2014-04-15T14:00:00-04:00", "category": "nonfinancial_amendment", "note": "Part III only; contributes no observation rows and must never displace a value."}
+  ],
+  "incompatible_basis_pairs": [
+    {"entity_id": "E2", "metric_id": "revenue", "minuend": "E2-FY2015H1", "subtrahend": "E2-FY2015Q1", "reason": "comparability basis E2-b2 vs E2-b1 across a fiscal-calendar change; Q2 derivation must refuse", "category": "incompatible_bases"}
+  ],
+  "listings": [
+    {"security_id": "S1", "ticker": "ONEA", "exchange": "XNYS", "information_available_at": "2012-01-03T09:30:00-05:00", "superseded_at": null, "is_current": true},
+    {"security_id": "S2", "ticker": "RETL", "exchange": "XNAS", "information_available_at": "2012-01-03T09:30:00-05:00", "superseded_at": null, "is_current": true},
+    {"security_id": "S3A", "ticker": "TCKA", "exchange": "XNYS", "information_available_at": "2012-01-03T09:30:00-05:00", "superseded_at": "2014-03-03T09:30:00-05:00", "is_current": false, "category": "ticker_change_old"},
+    {"security_id": "S3A", "ticker": "TCKX", "exchange": "XNYS", "information_available_at": "2014-03-03T09:30:00-05:00", "superseded_at": "2015-06-30T16:00:00-04:00", "is_current": true, "category": "ticker_change_new_then_delisted"},
+    {"security_id": "S3B", "ticker": "TCKB", "exchange": "XNYS", "information_available_at": "2012-01-03T09:30:00-05:00", "superseded_at": "2015-06-30T16:00:00-04:00", "is_current": false, "category": "delisting"}
+  ],
+  "cutoffs": [
+    {"at": "2013-06-03T09:30:00-04:00", "category": "after_first_filing"},
+    {"at": "2013-07-04T12:00:00-04:00", "category": "holiday"},
+    {"at": "2013-11-03T01:30:00-05:00", "category": "dst_transition"},
+    {"at": "2014-03-01T12:00:00-05:00", "category": "weekend"},
+    {"at": "2014-05-01T09:30:00-04:00", "category": "after_nonfinancial_amendment_before_financial"},
+    {"at": "2014-07-01T09:30:00-04:00", "category": "after_financial_amendment"},
+    {"at": "2014-11-28T13:00:00-05:00", "category": "half_day_early_close"},
+    {"at": "2015-01-10T09:30:00-05:00", "category": "after_mapping_release_before_next_filing"},
+    {"at": "2015-06-01T09:30:00-04:00", "category": "after_restated_comparative"},
+    {"at": "2015-07-15T09:30:00-04:00", "category": "after_delisting"},
+    {"at": "2016-06-01T09:30:00-04:00", "category": "after_everything"},
+    {"at": "2012-10-29T12:00:00-04:00", "category": "unscheduled_closure_pre_corpus"}
+  ]
+}
