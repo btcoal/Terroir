@@ -102,10 +102,10 @@ gates.
 | Ticket | Priority / size | Depends on | Status |
 | --- | --- | --- | --- |
 | [UF-001 — Freeze the Release 1 charter and issuer universe](tickets/UF-001.md) | P0 / M | None | Done ✅ · [PR #1](https://github.com/btcoal/Terroir/pull/1) |
-| [UF-002 — Publish the versioned canonical data dictionary](tickets/UF-002.md) | P0 / L | UF-001 | — |
-| [UF-003 — Specify information availability and execution-time policies](tickets/UF-003.md) | P0 / M | UF-001 | — |
-| [UF-004 — Define the fundamentals-to-returns and identifier contracts](tickets/UF-004.md) | P0 / M | UF-001 | — |
-| [UF-005 — Record architecture decisions and recalibrate the backlog](tickets/UF-005.md) | P0 / M | UF-001, UF-002, UF-003, UF-004 | — |
+| [UF-002 — Publish the versioned canonical data dictionary](tickets/UF-002.md) | P0 / L | UF-001 | Done ✅ · [PR #3](https://github.com/btcoal/Terroir/pull/3) |
+| [UF-003 — Specify information availability and execution-time policies](tickets/UF-003.md) | P0 / M | UF-001 | Done ✅ |
+| [UF-004 — Define the fundamentals-to-returns and identifier contracts](tickets/UF-004.md) | P0 / M | UF-001 | Done ✅ |
+| [UF-005 — Record architecture decisions and recalibrate the backlog](tickets/UF-005.md) | P0 / M | UF-001, UF-002, UF-003, UF-004 | Done ✅ |
 
 ---
 
@@ -113,14 +113,14 @@ gates.
 
 | Ticket | Priority / size | Depends on | Status |
 | --- | --- | --- | --- |
-| [UF-010 — Scaffold the repository, CI, configuration, and observability](tickets/UF-010.md) | P0 / M | UF-005 | — |
-| [UF-010A — Run a bounded real-data acquisition spike](tickets/UF-010A.md) | P0 / S | UF-010 | — |
-| [UF-011 — Implement versioned schemas and migrations](tickets/UF-011.md) | P0 / L | UF-002, UF-003, UF-004, UF-010 | — |
-| [UF-012 — Build immutable parser-input storage and accession manifests](tickets/UF-012.md) | P0 / M | UF-010, UF-011 | — |
-| [UF-013 — Build and pin the offline taxonomy package cache](tickets/UF-013.md) | P0 / L | UF-012, UF-020 | — |
-| [UF-014 — Implement deterministic build manifests and logical hashing](tickets/UF-014.md) | P0 / M | UF-010, UF-011, UF-012, UF-013 | — |
-| [UF-015 — Create synthetic fixtures and PIT metamorphic test harness](tickets/UF-015.md) | P0 / L | UF-003, UF-010, UF-011, UF-014 | — |
-| [UF-016 — Benchmark and select Parquet/DuckDB physical layouts](tickets/UF-016.md) | P0 / M | UF-011, UF-014, UF-021 | — |
+| [UF-010 — Scaffold the repository, CI, configuration, and observability](tickets/UF-010.md) | P0 / M | UF-005 | Done ✅ |
+| [UF-010A — Run a bounded real-data acquisition spike](tickets/UF-010A.md) | P0 / S | UF-010 | Done ✅ |
+| [UF-011 — Implement versioned schemas and migrations](tickets/UF-011.md) | P0 / L | UF-002, UF-003, UF-004, UF-010 | Done ✅ |
+| [UF-012 — Build immutable parser-input storage and accession manifests](tickets/UF-012.md) | P0 / M | UF-010, UF-011 | Done ✅ |
+| [UF-013 — Build and pin the offline taxonomy package cache](tickets/UF-013.md) | P0 / L | UF-012, UF-020 | Done ✅ |
+| [UF-014 — Implement deterministic build manifests and logical hashing](tickets/UF-014.md) | P0 / M | UF-010, UF-011, UF-012, UF-013 | Done ✅ |
+| [UF-015 — Create synthetic fixtures and PIT metamorphic test harness](tickets/UF-015.md) | P0 / L | UF-003, UF-010, UF-011, UF-014 | Done ✅ |
+| [UF-016 — Benchmark and select Parquet/DuckDB physical layouts](tickets/UF-016.md) | P0 / M | UF-011, UF-014, UF-021 | Done ✅ |
 
 ---
 
@@ -128,9 +128,9 @@ gates.
 
 | Ticket | Priority / size | Depends on | Status |
 | --- | --- | --- | --- |
-| [UF-020 — Implement a policy-compliant SEC transport client](tickets/UF-020.md) | P0 / M | UF-010 | — |
-| [UF-021 — Build the target universe and expected accession inventory](tickets/UF-021.md) | P0 / L | UF-001, UF-020 | — |
-| [UF-022 — Ingest SEC bulk reconciliation datasets](tickets/UF-022.md) | P0 / M | UF-020, UF-021 | — |
+| [UF-020 — Implement a policy-compliant SEC transport client](tickets/UF-020.md) | P0 / M | UF-010 | Done ✅ |
+| [UF-021 — Build the target universe and expected accession inventory](tickets/UF-021.md) | P0 / L | UF-001, UF-020 | Done ✅ |
+| [UF-022 — Ingest SEC bulk reconciliation datasets](tickets/UF-022.md) | P0 / M | UF-020, UF-021 | Done ✅ |
 | [UF-023 — Acquire and validate raw filing parser inputs](tickets/UF-023.md) | P0 / L | UF-012, UF-020, UF-021 | — |
 | [UF-024 — Reconcile acquisition completeness](tickets/UF-024.md) | P0 / M | UF-021, UF-022, UF-023 | — |
 | [UF-025 — Implement the supervised Arelle worker pool](tickets/UF-025.md) | P0 / L | UF-013, UF-023 | — |
