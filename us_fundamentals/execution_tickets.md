@@ -82,98 +82,98 @@ gates.
 
 ## M0 — Product contract
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-001 — Freeze the Release 1 charter and issuer universe](tickets/UF-001.md) | P0 / M | None |
-| [UF-002 — Publish the versioned canonical data dictionary](tickets/UF-002.md) | P0 / L | UF-001 |
-| [UF-003 — Specify information availability and execution-time policies](tickets/UF-003.md) | P0 / M | UF-001 |
-| [UF-004 — Define the fundamentals-to-returns and identifier contracts](tickets/UF-004.md) | P0 / M | UF-001 |
-| [UF-005 — Record architecture decisions and recalibrate the backlog](tickets/UF-005.md) | P0 / M | UF-001, UF-002, UF-003, UF-004 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-001 — Freeze the Release 1 charter and issuer universe](tickets/UF-001.md) | P0 / M | None | Done ✅ |
+| [UF-002 — Publish the versioned canonical data dictionary](tickets/UF-002.md) | P0 / L | UF-001 | — |
+| [UF-003 — Specify information availability and execution-time policies](tickets/UF-003.md) | P0 / M | UF-001 | — |
+| [UF-004 — Define the fundamentals-to-returns and identifier contracts](tickets/UF-004.md) | P0 / M | UF-001 | — |
+| [UF-005 — Record architecture decisions and recalibrate the backlog](tickets/UF-005.md) | P0 / M | UF-001, UF-002, UF-003, UF-004 | — |
 
 ---
 
 ## M1 — Correctness and storage foundations
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-010 — Scaffold the repository, CI, configuration, and observability](tickets/UF-010.md) | P0 / M | UF-005 |
-| [UF-011 — Implement versioned schemas and migrations](tickets/UF-011.md) | P0 / L | UF-002, UF-003, UF-004, UF-010 |
-| [UF-012 — Build immutable parser-input storage and accession manifests](tickets/UF-012.md) | P0 / M | UF-010, UF-011 |
-| [UF-013 — Build and pin the offline taxonomy package cache](tickets/UF-013.md) | P0 / L | UF-012 |
-| [UF-014 — Implement deterministic build manifests and logical hashing](tickets/UF-014.md) | P0 / M | UF-010, UF-011, UF-012, UF-013 |
-| [UF-015 — Create synthetic fixtures and PIT metamorphic test harness](tickets/UF-015.md) | P0 / L | UF-003, UF-010, UF-011, UF-014 |
-| [UF-016 — Benchmark and select Parquet/DuckDB physical layouts](tickets/UF-016.md) | P0 / M | UF-011, UF-014 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-010 — Scaffold the repository, CI, configuration, and observability](tickets/UF-010.md) | P0 / M | UF-005 | — |
+| [UF-011 — Implement versioned schemas and migrations](tickets/UF-011.md) | P0 / L | UF-002, UF-003, UF-004, UF-010 | — |
+| [UF-012 — Build immutable parser-input storage and accession manifests](tickets/UF-012.md) | P0 / M | UF-010, UF-011 | — |
+| [UF-013 — Build and pin the offline taxonomy package cache](tickets/UF-013.md) | P0 / L | UF-012 | — |
+| [UF-014 — Implement deterministic build manifests and logical hashing](tickets/UF-014.md) | P0 / M | UF-010, UF-011, UF-012, UF-013 | — |
+| [UF-015 — Create synthetic fixtures and PIT metamorphic test harness](tickets/UF-015.md) | P0 / L | UF-003, UF-010, UF-011, UF-014 | — |
+| [UF-016 — Benchmark and select Parquet/DuckDB physical layouts](tickets/UF-016.md) | P0 / M | UF-011, UF-014 | — |
 
 ---
 
 ## M2 — Bronze acquisition and Silver parsing
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-020 — Implement a policy-compliant SEC transport client](tickets/UF-020.md) | P0 / M | UF-010 |
-| [UF-021 — Build the target universe and expected accession inventory](tickets/UF-021.md) | P0 / L | UF-001, UF-020 |
-| [UF-022 — Ingest SEC bulk reconciliation datasets](tickets/UF-022.md) | P0 / M | UF-020, UF-021 |
-| [UF-023 — Acquire and validate raw filing parser inputs](tickets/UF-023.md) | P0 / L | UF-012, UF-020, UF-021 |
-| [UF-024 — Reconcile acquisition completeness](tickets/UF-024.md) | P0 / M | UF-021, UF-022, UF-023 |
-| [UF-025 — Implement the supervised Arelle worker pool](tickets/UF-025.md) | P0 / L | UF-013, UF-023 |
-| [UF-026 — Extract complete Silver XBRL structures](tickets/UF-026.md) | P0 / L | UF-011, UF-025 |
-| [UF-027 — Add parser, EFM, DQC, and source-reconciliation QC](tickets/UF-027.md) | P0 / L | UF-022, UF-026 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-020 — Implement a policy-compliant SEC transport client](tickets/UF-020.md) | P0 / M | UF-010 | — |
+| [UF-021 — Build the target universe and expected accession inventory](tickets/UF-021.md) | P0 / L | UF-001, UF-020 | — |
+| [UF-022 — Ingest SEC bulk reconciliation datasets](tickets/UF-022.md) | P0 / M | UF-020, UF-021 | — |
+| [UF-023 — Acquire and validate raw filing parser inputs](tickets/UF-023.md) | P0 / L | UF-012, UF-020, UF-021 | — |
+| [UF-024 — Reconcile acquisition completeness](tickets/UF-024.md) | P0 / M | UF-021, UF-022, UF-023 | — |
+| [UF-025 — Implement the supervised Arelle worker pool](tickets/UF-025.md) | P0 / L | UF-013, UF-023 | — |
+| [UF-026 — Extract complete Silver XBRL structures](tickets/UF-026.md) | P0 / L | UF-011, UF-025 | — |
+| [UF-027 — Add parser, EFM, DQC, and source-reconciliation QC](tickets/UF-027.md) | P0 / L | UF-022, UF-026 | — |
 
 ---
 
 ## M3 — Temporal entity and security master
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-030 — Build temporal entity records from SEC evidence](tickets/UF-030.md) | P0 / M | UF-021, UF-026 |
-| [UF-031 — Parse dimensional cover-page security observations](tickets/UF-031.md) | P0 / M | UF-026, UF-030 |
-| [UF-032 — Extract pre-tagging and untagged listing evidence](tickets/UF-032.md) | P0 / L | UF-020, UF-023, UF-030 |
-| [UF-033 — Infer securities and temporal listing intervals](tickets/UF-033.md) | P0 / L | UF-004, UF-031, UF-032 |
-| [UF-034 — Add security-master QC and optional identifier adapters](tickets/UF-034.md) | P1 / M | UF-033 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-030 — Build temporal entity records from SEC evidence](tickets/UF-030.md) | P0 / M | UF-021, UF-026 | — |
+| [UF-031 — Parse dimensional cover-page security observations](tickets/UF-031.md) | P0 / M | UF-026, UF-030 | — |
+| [UF-032 — Extract pre-tagging and untagged listing evidence](tickets/UF-032.md) | P0 / L | UF-020, UF-023, UF-030 | — |
+| [UF-033 — Infer securities and temporal listing intervals](tickets/UF-033.md) | P0 / L | UF-004, UF-031, UF-032 | — |
+| [UF-034 — Add security-master QC and optional identifier adapters](tickets/UF-034.md) | P1 / M | UF-033 | — |
 
 ---
 
 ## M4 — Gold mapping, periodization, and PIT
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-040 — Implement the versioned mapping-rule schema and compiler](tickets/UF-040.md) | P0 / L | UF-002, UF-011, UF-026 |
-| [UF-041 — Implement deterministic standard-concept mappings](tickets/UF-041.md) | P0 / L | UF-027, UF-040 |
-| [UF-042 — Enforce strict schemas for all machine-consumed LLM output](tickets/UF-042.md) | P0 / M | UF-002, UF-040 |
-| [UF-043 — Build custom-concept proposals and human review packets](tickets/UF-043.md) | P0 / L | UF-027, UF-040, UF-042 |
-| [UF-044 — Build canonical fact selection with complete provenance](tickets/UF-044.md) | P0 / L | UF-041, UF-043, UF-045 |
-| [UF-045 — Implement fiscal-period classification](tickets/UF-045.md) | P0 / L | UF-002, UF-026 |
-| [UF-046 — Derive compatible standalone quarters](tickets/UF-046.md) | P0 / M | UF-044, UF-045 |
-| [UF-047 — Classify amendment scope and build filing version chains](tickets/UF-047.md) | P0 / L | UF-026, UF-044 |
-| [UF-048 — Model comparability events and accounting bases](tickets/UF-048.md) | P0 / L | UF-044, UF-047 |
-| [UF-049 — Implement as-filed, latest, and PIT resolution](tickets/UF-049.md) | P0 / L | UF-014, UF-015, UF-016, UF-044, UF-047, UF-048 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-040 — Implement the versioned mapping-rule schema and compiler](tickets/UF-040.md) | P0 / L | UF-002, UF-011, UF-026 | — |
+| [UF-041 — Implement deterministic standard-concept mappings](tickets/UF-041.md) | P0 / L | UF-027, UF-040 | — |
+| [UF-042 — Enforce strict schemas for all machine-consumed LLM output](tickets/UF-042.md) | P0 / M | UF-002, UF-040 | — |
+| [UF-043 — Build custom-concept proposals and human review packets](tickets/UF-043.md) | P0 / L | UF-027, UF-040, UF-042 | — |
+| [UF-044 — Build canonical fact selection with complete provenance](tickets/UF-044.md) | P0 / L | UF-041, UF-043, UF-045 | — |
+| [UF-045 — Implement fiscal-period classification](tickets/UF-045.md) | P0 / L | UF-002, UF-026 | — |
+| [UF-046 — Derive compatible standalone quarters](tickets/UF-046.md) | P0 / M | UF-044, UF-045 | — |
+| [UF-047 — Classify amendment scope and build filing version chains](tickets/UF-047.md) | P0 / L | UF-026, UF-044 | — |
+| [UF-048 — Model comparability events and accounting bases](tickets/UF-048.md) | P0 / L | UF-044, UF-047 | — |
+| [UF-049 — Implement as-filed, latest, and PIT resolution](tickets/UF-049.md) | P0 / L | UF-014, UF-015, UF-016, UF-044, UF-047, UF-048 | — |
 
 ---
 
 ## M5 — QC and Research layer
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-050 — Implement unified QC status and quarantine](tickets/UF-050.md) | P0 / L | UF-027, UF-044, UF-049 |
-| [UF-051 — Implement accounting and cross-statement checks](tickets/UF-051.md) | P0 / L | UF-002, UF-044, UF-050 |
-| [UF-052 — Implement exact cross-source reconciliation](tickets/UF-052.md) | P0 / M | UF-022, UF-044, UF-050 |
-| [UF-053 — Add temporal, vintage, and currency QC](tickets/UF-053.md) | P0 / L | UF-045, UF-048, UF-050 |
-| [UF-054 — Implement versioned derived fundamentals](tickets/UF-054.md) | P0 / L | UF-002, UF-046, UF-048, UF-050, UF-051 |
-| [UF-055 — Implement session-aware research eligibility](tickets/UF-055.md) | P0 / M | UF-003, UF-049 |
-| [UF-056 — Complete and score the human-audited golden corpus](tickets/UF-056.md) | P0 / L | UF-027, UF-033, UF-044, UF-047, UF-048 |
-| [UF-057 — Run end-to-end research validation](tickets/UF-057.md) | P0 / L | UF-033, UF-049, UF-054, UF-055, UF-056 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-050 — Implement unified QC status and quarantine](tickets/UF-050.md) | P0 / L | UF-027, UF-044, UF-049 | — |
+| [UF-051 — Implement accounting and cross-statement checks](tickets/UF-051.md) | P0 / L | UF-002, UF-044, UF-050 | — |
+| [UF-052 — Implement exact cross-source reconciliation](tickets/UF-052.md) | P0 / M | UF-022, UF-044, UF-050 | — |
+| [UF-053 — Add temporal, vintage, and currency QC](tickets/UF-053.md) | P0 / L | UF-045, UF-048, UF-050 | — |
+| [UF-054 — Implement versioned derived fundamentals](tickets/UF-054.md) | P0 / L | UF-002, UF-046, UF-048, UF-050, UF-051 | — |
+| [UF-055 — Implement session-aware research eligibility](tickets/UF-055.md) | P0 / M | UF-003, UF-049 | — |
+| [UF-056 — Complete and score the human-audited golden corpus](tickets/UF-056.md) | P0 / L | UF-027, UF-033, UF-044, UF-047, UF-048 | — |
+| [UF-057 — Run end-to-end research validation](tickets/UF-057.md) | P0 / L | UF-033, UF-049, UF-054, UF-055, UF-056 | — |
 
 ---
 
 ## M6 — Historical release and production operation
 
-| Ticket | Priority / size | Depends on |
-| --- | --- | --- |
-| [UF-060 — Execute and reconcile the historical backfill](tickets/UF-060.md) | P0 / L | UF-024, UF-027, UF-033, UF-049, UF-050, UF-054 |
-| [UF-061 — Enforce release gates and publish the release report](tickets/UF-061.md) | P0 / L | UF-014, UF-024, UF-051, UF-052, UF-056, UF-057, UF-060 |
-| [UF-062 — Implement nightly incremental ingestion](tickets/UF-062.md) | P1 / L | UF-060, UF-061 |
-| [UF-063 — Add production dashboards and alerts](tickets/UF-063.md) | P1 / M | UF-060, UF-062 |
-| [UF-064 — Automate rebuilds and taxonomy/mapping governance](tickets/UF-064.md) | P1 / L | UF-061, UF-062, UF-063 |
+| Ticket | Priority / size | Depends on | Status |
+| --- | --- | --- | --- |
+| [UF-060 — Execute and reconcile the historical backfill](tickets/UF-060.md) | P0 / L | UF-024, UF-027, UF-033, UF-049, UF-050, UF-054 | — |
+| [UF-061 — Enforce release gates and publish the release report](tickets/UF-061.md) | P0 / L | UF-014, UF-024, UF-051, UF-052, UF-056, UF-057, UF-060 | — |
+| [UF-062 — Implement nightly incremental ingestion](tickets/UF-062.md) | P1 / L | UF-060, UF-061 | — |
+| [UF-063 — Add production dashboards and alerts](tickets/UF-063.md) | P1 / M | UF-060, UF-062 | — |
+| [UF-064 — Automate rebuilds and taxonomy/mapping governance](tickets/UF-064.md) | P1 / L | UF-061, UF-062, UF-063 | — |
 
 ---
 
