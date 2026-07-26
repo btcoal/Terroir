@@ -1,0 +1,908 @@
+{
+  "schema_version": 2,
+  "vintage_list_version": "1.0.0",
+  "packages": [
+    {
+      "family": "country",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/country/2011/country-2011-01-31.zip",
+      "file_name": "country-2011-01-31.zip",
+      "sha256": "247c42af71d1d2d975b2c20a174fc0e1b30b015b5685ea59d62250f1a68756a0",
+      "size_bytes": 21531,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/country/2011/": "country-2011-01-31",
+        "https://xbrl.sec.gov/country/2011/": "country-2011-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/country/2011/country-2011-01-31.xsd"
+    },
+    {
+      "family": "country",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/country/2012/country-2012-01-31.zip",
+      "file_name": "country-2012-01-31.zip",
+      "sha256": "a77186af7d351f7caf9254230c5d8f8c748793d4435caa280a03eec5de97fe4c",
+      "size_bytes": 21405,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/country/2012/": "country-2012-01-31",
+        "https://xbrl.sec.gov/country/2012/": "country-2012-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/country/2012/country-2012-01-31.xsd"
+    },
+    {
+      "family": "country",
+      "vintage": 2013,
+      "url": "https://xbrl.sec.gov/country/2013/country-2013-01-31.zip",
+      "file_name": "country-2013-01-31.zip",
+      "sha256": "3dd9696d140111eba9d3a515eb3a97a5d350a339dfbc3d8fb848db2ed0292834",
+      "size_bytes": 21655,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/country/2013/": "country-2013-01-31",
+        "https://xbrl.sec.gov/country/2013/": "country-2013-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/country/2013/country-2013-01-31.xsd"
+    },
+    {
+      "family": "country",
+      "vintage": 2016,
+      "url": "https://xbrl.sec.gov/country/2016/country-2016-01-31.zip",
+      "file_name": "country-2016-01-31.zip",
+      "sha256": "b07915b4f306b35b5d89d5f598b4061ec18b7c8b50570db578874eabb58fdc3a",
+      "size_bytes": 22150,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/country/2016/": "country-2016-01-31",
+        "https://xbrl.sec.gov/country/2016/": "country-2016-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/country/2016/country-2016-01-31.xsd"
+    },
+    {
+      "family": "country",
+      "vintage": 2017,
+      "url": "https://xbrl.sec.gov/country/2017/country-2017-01-31.zip",
+      "file_name": "country-2017-01-31.zip",
+      "sha256": "3f400cca61596aac87b50f62e3798b1320453f28dd0a5c0fcea68326c3bcdc91",
+      "size_bytes": 21632,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/country/2017/": "country-2017-01-31",
+        "https://xbrl.sec.gov/country/2017/": "country-2017-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/country/2017/country-2017-01-31.xsd"
+    },
+    {
+      "family": "country",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/country/2020/country-2020.zip",
+      "file_name": "country-2020.zip",
+      "sha256": "5197dba59dd65f72edd241396ba817d807b541a75c01a4923a38620ffcaca91e",
+      "size_bytes": 20715,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/country/2020/": "country-2020",
+        "https://xbrl.sec.gov/country/2020/": "country-2020"
+      },
+      "entry_point": "https://xbrl.sec.gov/country/2020/country-2020-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/currency/2011/currency-2011-01-31.zip",
+      "file_name": "currency-2011-01-31.zip",
+      "sha256": "27aa8c19618fe51f7bf8ddd0a12e40f4e4aabda44400394f6776ef4afbff4618",
+      "size_bytes": 19380,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2011/": "currency-2011-01-31",
+        "https://xbrl.sec.gov/currency/2011/": "currency-2011-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2011/currency-2011-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/currency/2012/currency-2012-01-31.zip",
+      "file_name": "currency-2012-01-31.zip",
+      "sha256": "664fe0fefcd48b37e16874eb1dee84c8b2f67bec4186cb8db64152289aea9a9c",
+      "size_bytes": 23875,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2012/": "currency-2012-01-31",
+        "https://xbrl.sec.gov/currency/2012/": "currency-2012-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2012/currency-2012-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2014,
+      "url": "https://xbrl.sec.gov/currency/2014/currency-2014-01-31.zip",
+      "file_name": "currency-2014-01-31.zip",
+      "sha256": "c12afcbad65735d8c710a46b92fa242a5a86992ecaee24fb66215935636abb73",
+      "size_bytes": 23994,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2014/": "currency-2014-01-31",
+        "https://xbrl.sec.gov/currency/2014/": "currency-2014-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2014/currency-2014-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2016,
+      "url": "https://xbrl.sec.gov/currency/2016/currency-2016-01-31.zip",
+      "file_name": "currency-2016-01-31.zip",
+      "sha256": "87d0457f1fab1fc4b852ac083850a789c1c1d0b8a8158721d4241fd016513ca0",
+      "size_bytes": 24709,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2016/": "currency-2016-01-31",
+        "https://xbrl.sec.gov/currency/2016/": "currency-2016-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2016/currency-2016-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2017,
+      "url": "https://xbrl.sec.gov/currency/2017/currency-2017-01-31.zip",
+      "file_name": "currency-2017-01-31.zip",
+      "sha256": "90d849603168429d50d04caf371ed3f8b2c9900646353e91faacb7a4742a2a05",
+      "size_bytes": 22652,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2017/": "currency-2017-01-31",
+        "https://xbrl.sec.gov/currency/2017/": "currency-2017-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2017/currency-2017-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2019,
+      "url": "https://xbrl.sec.gov/currency/2019/currency-2019.zip",
+      "file_name": "currency-2019.zip",
+      "sha256": "c9cf8e5d449818add8c3b436670684343298731c4ff771908030b6ed43eeca99",
+      "size_bytes": 22532,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2019/": "currency-2019",
+        "https://xbrl.sec.gov/currency/2019/": "currency-2019"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2019/currency-2019-01-31.xsd"
+    },
+    {
+      "family": "currency",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/currency/2020/currency-2020.zip",
+      "file_name": "currency-2020.zip",
+      "sha256": "ea0a4859388ed76f45fd63c9e0fce4996f8259ab457bb536001ffab194f636e9",
+      "size_bytes": 22224,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/currency/2020/": "currency-2020",
+        "https://xbrl.sec.gov/currency/2020/": "currency-2020"
+      },
+      "entry_point": "https://xbrl.sec.gov/currency/2020/currency-2020-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/dei/2011/dei-2011-01-31.zip",
+      "file_name": "dei-2011-01-31.zip",
+      "sha256": "486691a1bfbe103c62e815836a7e0a944a67ff3538b52de525824170f5388a42",
+      "size_bytes": 33077,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2011/": "dei-2011-01-31",
+        "https://xbrl.sec.gov/dei/2011/": "dei-2011-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2011/dei-2011-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/dei/2012/dei-2012-01-31.zip",
+      "file_name": "dei-2012-01-31.zip",
+      "sha256": "6e2fc35c74a8817889d9ae9c6cc39e2d310f0313e780700289d69fa7f8fef3dd",
+      "size_bytes": 31690,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2012/": "dei-2012-01-31",
+        "https://xbrl.sec.gov/dei/2012/": "dei-2012-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2012/dei-2012-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2013,
+      "url": "https://xbrl.sec.gov/dei/2013/dei-2013-01-31.zip",
+      "file_name": "dei-2013-01-31.zip",
+      "sha256": "a85a8268307a0a7ca3adeadaeafd83ead66cd09957b5bd49efae4e84cbcba19a",
+      "size_bytes": 31036,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2013/": "dei-2013-01-31",
+        "https://xbrl.sec.gov/dei/2013/": "dei-2013-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2013/dei-2013-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2014,
+      "url": "https://xbrl.sec.gov/dei/2014/dei-2014-01-31.zip",
+      "file_name": "dei-2014-01-31.zip",
+      "sha256": "973f2e55d7cc938abc904487726f9b81449e3d0465cebeaac24d48e1d7f08e27",
+      "size_bytes": 31297,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2014/": "dei-2014-01-31",
+        "https://xbrl.sec.gov/dei/2014/": "dei-2014-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2014/dei-2014-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2018,
+      "url": "https://xbrl.sec.gov/dei/2018/dei-2018.zip",
+      "file_name": "dei-2018.zip",
+      "sha256": "99a83172fc089e7f479975d235604b05ef6b5f4cbb1ba9d1481dbffbcd9652dd",
+      "size_bytes": 32447,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2018/": "dei-2018",
+        "https://xbrl.sec.gov/dei/2018/": "dei-2018"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2018/dei-2018-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2019,
+      "url": "https://xbrl.sec.gov/dei/2019/dei-2019.zip",
+      "file_name": "dei-2019.zip",
+      "sha256": "352beca70cd7ed9b6154cd6f4795356b5003e9598299453f86a11ff8d772303a",
+      "size_bytes": 47536,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2019/": "dei-2019",
+        "https://xbrl.sec.gov/dei/2019/": "dei-2019"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2019/dei-2019-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/dei/2020/dei-2020.zip",
+      "file_name": "dei-2020.zip",
+      "sha256": "3c2e31e895ae1e0efb4eaefae4f164f5175e8251b3205d76355f2708802e0618",
+      "size_bytes": 45978,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2020/": "dei-2020",
+        "https://xbrl.sec.gov/dei/2020/": "dei-2020"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2020/dei-2020-01-31.xsd"
+    },
+    {
+      "family": "dei",
+      "vintage": 2024,
+      "url": "https://xbrl.sec.gov/dei/2024/dei-2024.zip",
+      "file_name": "dei-2024.zip",
+      "sha256": "7892488f5c9d03b92636c35692f3cec2718e9cbc7d6842ec21e2920514a19f75",
+      "size_bytes": 42531,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/dei/2024/": "dei-2024/2024",
+        "https://xbrl.sec.gov/dei/2024/": "dei-2024/2024"
+      },
+      "entry_point": "https://xbrl.sec.gov/dei/2024/dei-2024.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/exch/2011/exch-2011-01-31.zip",
+      "file_name": "exch-2011-01-31.zip",
+      "sha256": "75ca94cb06a9f0f0a5b0f1b2039307795e4d5a988528f1f5f028645810a1ba6b",
+      "size_bytes": 76067,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2011/": "exch-2011-01-31",
+        "https://xbrl.sec.gov/exch/2011/": "exch-2011-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2011/exch-2011-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/exch/2012/exch-2012-01-31.zip",
+      "file_name": "exch-2012-01-31.zip",
+      "sha256": "0404b1aabb7ffe0b0df5213f6a4558fda53c66ebca302d781a8e85cf47b2585f",
+      "size_bytes": 82318,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2012/": "exch-2012-01-31",
+        "https://xbrl.sec.gov/exch/2012/": "exch-2012-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2012/exch-2012-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2013,
+      "url": "https://xbrl.sec.gov/exch/2013/exch-2013-01-31.zip",
+      "file_name": "exch-2013-01-31.zip",
+      "sha256": "47358ad6c84b49bb5733d70f967e01d38c303311b7519e57216df92e9b795b1e",
+      "size_bytes": 92443,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2013/": "exch-2013-01-31",
+        "https://xbrl.sec.gov/exch/2013/": "exch-2013-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2013/exch-2013-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2014,
+      "url": "https://xbrl.sec.gov/exch/2014/exch-2014-01-31.zip",
+      "file_name": "exch-2014-01-31.zip",
+      "sha256": "9f69aeb0982cd4eecedbbdd6438f65f5a4b7ff799612aefc330ad3f8359df5aa",
+      "size_bytes": 104224,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2014/": "exch-2014-01-31",
+        "https://xbrl.sec.gov/exch/2014/": "exch-2014-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2014/exch-2014-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2015,
+      "url": "https://xbrl.sec.gov/exch/2015/exch-2015-01-31.zip",
+      "file_name": "exch-2015-01-31.zip",
+      "sha256": "57d73d2a64316ad75d3be997932ce996ca2ea154871c8fe81caf258a8ec90cfe",
+      "size_bytes": 108009,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2015/": "exch-2015-01-31",
+        "https://xbrl.sec.gov/exch/2015/": "exch-2015-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2015/exch-2015-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2016,
+      "url": "https://xbrl.sec.gov/exch/2016/exch-2016-01-31.zip",
+      "file_name": "exch-2016-01-31.zip",
+      "sha256": "e3f5085c25eb367a312997be6aef66383fe9896f5cb6b25a99b9e37221639fc6",
+      "size_bytes": 116416,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2016/": "exch-2016-01-31",
+        "https://xbrl.sec.gov/exch/2016/": "exch-2016-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2016/exch-2016-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2017,
+      "url": "https://xbrl.sec.gov/exch/2017/exch-2017-01-31.zip",
+      "file_name": "exch-2017-01-31.zip",
+      "sha256": "de391c2c881fd5d64cb9b73da05d346081afa38a40894335568d908d74128918",
+      "size_bytes": 123437,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2017/": "exch-2017-01-31",
+        "https://xbrl.sec.gov/exch/2017/": "exch-2017-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2017/exch-2017-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2019,
+      "url": "https://xbrl.sec.gov/exch/2019/exch-2019.zip",
+      "file_name": "exch-2019.zip",
+      "sha256": "b035c7f1bba6837f06348486c7023628d304ed1f663a7561cd82ffebaa23492d",
+      "size_bytes": 191794,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2019/": "exch-2019",
+        "https://xbrl.sec.gov/exch/2019/": "exch-2019"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2019/exch-2019-01-31.xsd"
+    },
+    {
+      "family": "exch",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/exch/2020/exch-2020.zip",
+      "file_name": "exch-2020.zip",
+      "sha256": "4fc40b83be8afdcb8f2e1a474411dccb920d8c724731574114edbadc7b17e95d",
+      "size_bytes": 204590,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/exch/2020/": "exch-2020",
+        "https://xbrl.sec.gov/exch/2020/": "exch-2020"
+      },
+      "entry_point": "https://xbrl.sec.gov/exch/2020/exch-2020-01-31.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2018,
+      "url": "https://xbrl.fasb.org/srt/2018/srt-2018-01-31.zip",
+      "file_name": "srt-2018-01-31.zip",
+      "sha256": "849e0e31a6476cde7969e9ad70bf0995dbcbf683fc75c3d6f824ec760185c40a",
+      "size_bytes": 140413,
+      "catalog_sha256": "34941baa92914eaa371213034e018e07e02e615daa1f02aef39a06690cbda950",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2018/": "srt-2018-01-31/srt-2018-01-31",
+        "https://xbrl.fasb.org/srt/2018/": "srt-2018-01-31/srt-2018-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2018/elts/srt-2018-01-31.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2019,
+      "url": "https://xbrl.fasb.org/srt/2019/srt-2019-01-31.zip",
+      "file_name": "srt-2019-01-31.zip",
+      "sha256": "947af75fd03cd08915430b7b4200e9c037d0d14e4f86a12632adb16eedbf73f7",
+      "size_bytes": 161358,
+      "catalog_sha256": "898fb95659db87edc33aef9aaf06aadf4fa11a55fdb6488a49cf32679ae4478e",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2019/": "srt-2019-01-31/srt-2019-01-31",
+        "https://xbrl.fasb.org/srt/2019/": "srt-2019-01-31/srt-2019-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2019/elts/srt-2019-01-31.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2020,
+      "url": "https://xbrl.fasb.org/srt/2020/srt-2020-01-31.zip",
+      "file_name": "srt-2020-01-31.zip",
+      "sha256": "57168b52f9e8da5bc9aa593f6a6aacc581c83877b59fe8d43291730da1bc840c",
+      "size_bytes": 158794,
+      "catalog_sha256": "12e1528f5eb0a93992335d9400a70e68fd613073c8e209c2f0a1d55d88eda49c",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2020/": "srt-2020-01-31/srt-2020-01-31",
+        "https://xbrl.fasb.org/srt/2020/": "srt-2020-01-31/srt-2020-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2020/elts/srt-2020-01-31.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2021,
+      "url": "https://xbrl.fasb.org/srt/2021/srt-2021-01-31.zip",
+      "file_name": "srt-2021-01-31.zip",
+      "sha256": "096cc522a9b7424d07459df76ffd4462dd74b910e702901a4f587960009c4327",
+      "size_bytes": 186168,
+      "catalog_sha256": "aeaf78fb10393e010844d2288a3848778891344cad8d2f1e8b3a1bc3dc18f23d",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2021/": "srt-2021-01-31/srt-2021-01-31",
+        "https://xbrl.fasb.org/srt/2021/": "srt-2021-01-31/srt-2021-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2021/elts/srt-2021-01-31.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2022,
+      "url": "https://xbrl.fasb.org/srt/2022/srt-2022.zip",
+      "file_name": "srt-2022.zip",
+      "sha256": "37d0156ccc5ee77594a84109eb475ca3fe75a56ff25069e261e943d451451c9f",
+      "size_bytes": 182036,
+      "catalog_sha256": "c10d0f834150036bc552632306a071acdac7de8de273b504deb46e360424e9a3",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2022/": "srt-2022/srt-2022",
+        "https://xbrl.fasb.org/srt/2022/": "srt-2022/srt-2022"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2022/elts/srt-2022.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2023,
+      "url": "https://xbrl.fasb.org/srt/2023/srt-2023.zip",
+      "file_name": "srt-2023.zip",
+      "sha256": "e1a667a56cde32af35fcf5a1936691bd4d22e52a29ce2af7218c5ef4c23810de",
+      "size_bytes": 188585,
+      "catalog_sha256": "462a4cb9e52ac5fdc15abf9d8d10d9afe92e3cdcac8aa26939abd21ced21f18d",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2023/": "srt-2023/srt-2023",
+        "https://xbrl.fasb.org/srt/2023/": "srt-2023/srt-2023"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2024,
+      "url": "https://xbrl.fasb.org/srt/2024/srt-2024.zip",
+      "file_name": "srt-2024.zip",
+      "sha256": "136d16f1bf62ca1966300231b2b399f90631ba703381aeec467e9bec4f3867eb",
+      "size_bytes": 188150,
+      "catalog_sha256": "1d09eb1d9bfd6d8ff64001fad053280f0d70a088caef3786fa1e1432a26d418d",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2024/": "srt-2024/srt-2024",
+        "https://xbrl.fasb.org/srt/2024/": "srt-2024/srt-2024"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2024/elts/srt-2024.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2025,
+      "url": "https://xbrl.fasb.org/srt/2025/srt-2025.zip",
+      "file_name": "srt-2025.zip",
+      "sha256": "aad1daeb4bdfe3057f4ed81482c06130f873a59fa7fce5193c5731f93b1fef88",
+      "size_bytes": 191908,
+      "catalog_sha256": "e3049239cab4fb998c2f959cf1d0e85c331a331e82dfe54c3ba32471c5ac1d4d",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2025/": "srt-2025/srt-2025",
+        "https://xbrl.fasb.org/srt/2025/": "srt-2025/srt-2025"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2025/elts/srt-2025.xsd"
+    },
+    {
+      "family": "srt",
+      "vintage": 2026,
+      "url": "https://xbrl.fasb.org/srt/2026/srt-2026.zip",
+      "file_name": "srt-2026.zip",
+      "sha256": "34dab1ee7a10b9991fee1e17437c278908599ff2258ea3270ef718cab265be05",
+      "size_bytes": 195234,
+      "catalog_sha256": "3d984d7ebbd0f17ab1248661deddac6d98fc6830c7899847b68c1f616de3a668",
+      "rewrites": {
+        "http://xbrl.fasb.org/srt/2026/": "srt-2026/srt-2026",
+        "https://xbrl.fasb.org/srt/2026/": "srt-2026/srt-2026"
+      },
+      "entry_point": "https://xbrl.fasb.org/srt/2026/elts/srt-2026.xsd"
+    },
+    {
+      "family": "stpr",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/stpr/2011/stpr-2011-01-31.zip",
+      "file_name": "stpr-2011-01-31.zip",
+      "sha256": "441c22bb2558fc27de1e46984a4f3aa909470968ea39d258b07a5c9cbd73ef19",
+      "size_bytes": 8842,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.sec.gov/stpr/2011/": "stpr-2011-01-31",
+        "https://xbrl.sec.gov/stpr/2011/": "stpr-2011-01-31"
+      },
+      "entry_point": "https://xbrl.sec.gov/stpr/2011/stpr-2011-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2011,
+      "url": "https://xbrl.fasb.org/us-gaap/2011/us-gaap-2011-01-31.zip",
+      "file_name": "us-gaap-2011-01-31.zip",
+      "sha256": "2b2c8ca45b30ca500858702909009ca5cdd94934a34cd4b4764588caa1d6fe1b",
+      "size_bytes": 5343452,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2011/": "us-gaap-2011-01-31/us-gaap-2011-01-31",
+        "https://xbrl.fasb.org/us-gaap/2011/": "us-gaap-2011-01-31/us-gaap-2011-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2011/elts/us-gaap-2011-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2012,
+      "url": "https://xbrl.fasb.org/us-gaap/2012/us-gaap-2012-01-31.zip",
+      "file_name": "us-gaap-2012-01-31.zip",
+      "sha256": "4f4d3298fe03f6a703d981fd2aeebb033916c936b7d73490c8d5b9c4c50b2da8",
+      "size_bytes": 5665429,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2012/": "us-gaap-2012-01-31/us-gaap-2012-01-31",
+        "https://xbrl.fasb.org/us-gaap/2012/": "us-gaap-2012-01-31/us-gaap-2012-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2012/elts/us-gaap-2012-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2013,
+      "url": "https://xbrl.fasb.org/us-gaap/2013/us-gaap-2013-01-31.zip",
+      "file_name": "us-gaap-2013-01-31.zip",
+      "sha256": "18ac2f2dd8c66578edeafc114e61dd3013297ecd5a2f35737e4f34e80f6a54bf",
+      "size_bytes": 5893164,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2013/": "us-gaap-2013-01-31/us-gaap-2013-01-31",
+        "https://xbrl.fasb.org/us-gaap/2013/": "us-gaap-2013-01-31/us-gaap-2013-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2013/elts/us-gaap-2013-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2014,
+      "url": "https://xbrl.fasb.org/us-gaap/2014/us-gaap-2014-01-31.zip",
+      "file_name": "us-gaap-2014-01-31.zip",
+      "sha256": "2ca2ba7cdfd17c96d6d063fd374a4a1b304df18cf20641920bd617f5cf61b0e3",
+      "size_bytes": 5582583,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2014/": "us-gaap-2014-01-31/us-gaap-2014-01-31",
+        "https://xbrl.fasb.org/us-gaap/2014/": "us-gaap-2014-01-31/us-gaap-2014-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2014/elts/us-gaap-2014-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2015,
+      "url": "https://xbrl.fasb.org/us-gaap/2015/us-gaap-2015-01-31.zip",
+      "file_name": "us-gaap-2015-01-31.zip",
+      "sha256": "a04aa2b28b7b5f1041b924188ef40bae4465eec15112c2b3675cf84cdafacca7",
+      "size_bytes": 5803950,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2015/": "us-gaap-2015-01-31/us-gaap-2015-01-31",
+        "https://xbrl.fasb.org/us-gaap/2015/": "us-gaap-2015-01-31/us-gaap-2015-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2016,
+      "url": "https://xbrl.fasb.org/us-gaap/2016/us-gaap-2016-01-31.zip",
+      "file_name": "us-gaap-2016-01-31.zip",
+      "sha256": "3ac21e733fb5373495ae286334c28930d70702567c35e0174e9ec3b1b126c5d6",
+      "size_bytes": 5400556,
+      "catalog_sha256": null,
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2016/": "us-gaap-2016-01-31/us-gaap-2016-01-31",
+        "https://xbrl.fasb.org/us-gaap/2016/": "us-gaap-2016-01-31/us-gaap-2016-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2017,
+      "url": "https://xbrl.fasb.org/us-gaap/2017/us-gaap-2017-01-31.zip",
+      "file_name": "us-gaap-2017-01-31.zip",
+      "sha256": "77694ed4226feda79577487151118d0eb7e1df679c08ab13a5c575e11429a758",
+      "size_bytes": 5509516,
+      "catalog_sha256": "8153df89b117dceaf2431a2f507afb6119ac735ccb14d1be231090e0e587307b",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2017/": "us-gaap-2017-01-31/us-gaap-2017-01-31",
+        "https://xbrl.fasb.org/us-gaap/2017/": "us-gaap-2017-01-31/us-gaap-2017-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2017/elts/us-gaap-2017-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2018,
+      "url": "https://xbrl.fasb.org/us-gaap/2018/us-gaap-2018-01-31.zip",
+      "file_name": "us-gaap-2018-01-31.zip",
+      "sha256": "1c1dac3d1cf8575c3e0f425a8dd6d800d8989febbddfc3f42c62f802715d3d7f",
+      "size_bytes": 5554418,
+      "catalog_sha256": "a5173854072a3128cd97925175d288202366bb986a9374abcb70f54a07677360",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2018/": "us-gaap-2018-01-31/us-gaap-2018-01-31",
+        "https://xbrl.fasb.org/us-gaap/2018/": "us-gaap-2018-01-31/us-gaap-2018-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2018/elts/us-gaap-2018-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2019,
+      "url": "https://xbrl.fasb.org/us-gaap/2019/us-gaap-2019-01-31.zip",
+      "file_name": "us-gaap-2019-01-31.zip",
+      "sha256": "16ea8c9f25e61a3d2e824ab917067f787683c9eeff2147cbe3b0463508d1d667",
+      "size_bytes": 5728252,
+      "catalog_sha256": "7069446062293ff3be0e8b8062cb4ec805014bab1c9a78f7fd9fcbb8d38e2692",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2019/": "us-gaap-2019-01-31/us-gaap-2019-01-31",
+        "https://xbrl.fasb.org/us-gaap/2019/": "us-gaap-2019-01-31/us-gaap-2019-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2019/elts/us-gaap-2019-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2020,
+      "url": "https://xbrl.fasb.org/us-gaap/2020/us-gaap-2020-01-31.zip",
+      "file_name": "us-gaap-2020-01-31.zip",
+      "sha256": "043d45481d7baacb2f04ebd97dbcfecdc6706b74e38fe002c4b4703ef7a0a4d2",
+      "size_bytes": 6345468,
+      "catalog_sha256": "e39d1608417106fb21aa330286f5d1d987681e16c2caa379c534d90073c10944",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2020/": "us-gaap-2020-01-31/us-gaap-2020-01-31",
+        "https://xbrl.fasb.org/us-gaap/2020/": "us-gaap-2020-01-31/us-gaap-2020-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2020/elts/us-gaap-2020-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2021,
+      "url": "https://xbrl.fasb.org/us-gaap/2021/us-gaap-2021-01-31.zip",
+      "file_name": "us-gaap-2021-01-31.zip",
+      "sha256": "2e4309134cf62ff7ad61a371333fe52c6002279706bba244b63b4e64b8274843",
+      "size_bytes": 6526936,
+      "catalog_sha256": "8742e64234a336168fee624319852d04d060faf950f51c6adcd3c8d960e40d5b",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2021/": "us-gaap-2021-01-31/us-gaap-2021-01-31",
+        "https://xbrl.fasb.org/us-gaap/2021/": "us-gaap-2021-01-31/us-gaap-2021-01-31"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-2021-01-31.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2022,
+      "url": "https://xbrl.fasb.org/us-gaap/2022/us-gaap-2022.zip",
+      "file_name": "us-gaap-2022.zip",
+      "sha256": "8af6fbbcec3818cd372f391cece9e62018e115b7b65ea75a6a38b9709af3ab37",
+      "size_bytes": 6485888,
+      "catalog_sha256": "ceb4d1adcb42dd1a97e3311660ec3a13cac2c68fb7565422426da017e43fc229",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2022/": "us-gaap-2022/us-gaap-2022",
+        "https://xbrl.fasb.org/us-gaap/2022/": "us-gaap-2022/us-gaap-2022"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2022/elts/us-gaap-2022.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2023,
+      "url": "https://xbrl.fasb.org/us-gaap/2023/us-gaap-2023.zip",
+      "file_name": "us-gaap-2023.zip",
+      "sha256": "b48fbb7be5cbaef5532ebff51394176ca6e7241ffce5fc88812485b8e6f9d6fd",
+      "size_bytes": 6607657,
+      "catalog_sha256": "0c589635ec1bdeaf717712322b15aa087a49c3fc6fa95562d84c2bd7733453a2",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2023/": "us-gaap-2023/us-gaap-2023",
+        "https://xbrl.fasb.org/us-gaap/2023/": "us-gaap-2023/us-gaap-2023"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2023/elts/us-gaap-2023.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2024,
+      "url": "https://xbrl.fasb.org/us-gaap/2024/us-gaap-2024.zip",
+      "file_name": "us-gaap-2024.zip",
+      "sha256": "decdd417d86ff7bfb5ca166c0ca1001017aea873673544a8d7f91c34bf5d82df",
+      "size_bytes": 7115653,
+      "catalog_sha256": "c287bfe6f59dc4e606b6730fc9314162f830d484b1782bd72dde5a8f0656570c",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2024/": "us-gaap-2024/us-gaap-2024",
+        "https://xbrl.fasb.org/us-gaap/2024/": "us-gaap-2024/us-gaap-2024"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2024/elts/us-gaap-2024.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2025,
+      "url": "https://xbrl.fasb.org/us-gaap/2025/us-gaap-2025.zip",
+      "file_name": "us-gaap-2025.zip",
+      "sha256": "a3b835925ad74030eb5be865a26d7dfe44013081c4ab7204b6122316a685fff4",
+      "size_bytes": 7101405,
+      "catalog_sha256": "99df044af9242755552c5f144e0bddab6c83a67cc3fd5a9984bff6ea6dc5ca05",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2025/": "us-gaap-2025/us-gaap-2025",
+        "https://xbrl.fasb.org/us-gaap/2025/": "us-gaap-2025/us-gaap-2025"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2025/elts/us-gaap-2025.xsd"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2026,
+      "url": "https://xbrl.fasb.org/us-gaap/2026/us-gaap-2026.zip",
+      "file_name": "us-gaap-2026.zip",
+      "sha256": "f4c8b8b5697ba7d825a8614b159611cd25a46640e98a9737cda1e4a672bd4c81",
+      "size_bytes": 7387980,
+      "catalog_sha256": "3e6db9c63f93fb44283187db7b3d005f2091370373b1d5ee5e79a8fd976500eb",
+      "rewrites": {
+        "http://xbrl.fasb.org/us-gaap/2026/": "us-gaap-2026/us-gaap-2026",
+        "https://xbrl.fasb.org/us-gaap/2026/": "us-gaap-2026/us-gaap-2026"
+      },
+      "entry_point": "https://xbrl.fasb.org/us-gaap/2026/elts/us-gaap-2026.xsd"
+    }
+  ],
+  "core_schemas": {
+    "rewrites": {
+      "http://": "_core",
+      "https://": "_core"
+    },
+    "files": [
+      {
+        "url": "http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd",
+        "sha256": "5dbad94cecf42918b976449a8e1cb800d57e96442a9d0f5c00ca77e4da831827",
+        "size_bytes": 23637
+      },
+      {
+        "url": "http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd",
+        "sha256": "f906cd30bc47a81bd1c97e24447f4917b21eb3d8a8b4fc520129ce2534ac5bca",
+        "size_bytes": 16088
+      },
+      {
+        "url": "http://www.xbrl.org/2003/xl-2003-12-31.xsd",
+        "sha256": "e28b0965d34f4879833b433a62d0d1e86e8b1f22e6b7642bab861983f5bb5818",
+        "size_bytes": 8734
+      },
+      {
+        "url": "http://www.xbrl.org/2003/xlink-2003-12-31.xsd",
+        "sha256": "5ffa8cb747ccd11e0d6420cf5668b60e3b7a64e20915d0e1774e5559d3343971",
+        "size_bytes": 3350
+      },
+      {
+        "url": "http://www.xbrl.org/2004/ref-2004-08-10.xsd",
+        "sha256": "6d87f61f677cf8ab9c049a0e673bf90d340ead454f1b47657bf8bb1e112dfd59",
+        "size_bytes": 6881
+      },
+      {
+        "url": "http://www.xbrl.org/2005/xbrldt-2005.xsd",
+        "sha256": "caf850f08d74c087c7946e6ea6d9fb5c0e9f8edf63bf639ccb9143e77e3390c7",
+        "size_bytes": 3929
+      },
+      {
+        "url": "http://www.xbrl.org/2006/ref-2006-02-27.xsd",
+        "sha256": "fae0144a41edf741c3b74c866988f64d24714dba4ca822258dea8b490b7904b7",
+        "size_bytes": 6544
+      },
+      {
+        "url": "http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd",
+        "sha256": "8d932e134a34b692d917919b1bf38c3106cf54b3f085f02850a51eb8db8f347b",
+        "size_bytes": 4024
+      },
+      {
+        "url": "http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd",
+        "sha256": "5d5a951356396ca5cdedae38def3a7c243ac49394b77670e6b76e00a3a9b966e",
+        "size_bytes": 3462
+      },
+      {
+        "url": "https://www.xbrl.org/2020/extensible-enumerations-2.0.xsd",
+        "sha256": "17a021e3e3fd5ca2ff0cde05988c78f12a6cadd71077347e0ae4376a78b586e8",
+        "size_bytes": 2198
+      },
+      {
+        "url": "https://www.xbrl.org/dtr/type/2020-01-21/types.xsd",
+        "sha256": "a62f1f3635bc6b6cddd1422ab2c9ba00ebbe73cefc3500e207fa0e9c12ee0293",
+        "size_bytes": 43431
+      },
+      {
+        "url": "https://www.xbrl.org/dtr/type/2022-03-31/types.xsd",
+        "sha256": "e7eb1bef6a68845cc0dd5d370d18ceda92978dd54a6809a22286d4e6af87ca4b",
+        "size_bytes": 45291
+      },
+      {
+        "url": "https://www.xbrl.org/dtr/type/2024-01-31/types.xsd",
+        "sha256": "1fdffdb8629c8de20e33d47a0ff1fbdd84abea44f9e8c36e57a3c9e132c9ca35",
+        "size_bytes": 48107
+      },
+      {
+        "url": "https://xbrl.sec.gov/country/2021/country-2021.xsd",
+        "sha256": "921eccde5e8b9e825448ffbc87123126e03c4bffaf9c233e90dad390af73fa89",
+        "size_bytes": 42514
+      },
+      {
+        "url": "https://xbrl.sec.gov/country/2022/country-2022.xsd",
+        "sha256": "706bf0d76808408c37c736b5202ffc55b35de00895d809596b908f0961f9a729",
+        "size_bytes": 42241
+      },
+      {
+        "url": "https://xbrl.sec.gov/country/2023/country-2023.xsd",
+        "sha256": "b020349116649ac236d9a201c1ccf9c934526a58ac12739c11ca4a72ef012ab7",
+        "size_bytes": 42500
+      },
+      {
+        "url": "https://xbrl.sec.gov/country/2024/country-2024.xsd",
+        "sha256": "f03371d53118f676c78eb1cafbafcef5a3aac0cefc6d77edebb3726d8db98079",
+        "size_bytes": 42458
+      },
+      {
+        "url": "https://xbrl.sec.gov/country/2025/country-2025.xsd",
+        "sha256": "dad858d60293b4a7d89934a33a3950950a3b0066af7998c3ad6570399cc80599",
+        "size_bytes": 42318
+      },
+      {
+        "url": "https://xbrl.sec.gov/country/2026/country-2026.xsd",
+        "sha256": "a1a84c1c00fe0348642c795dfe4bd55597a843d50a1e6bb84de32bb1e3f82c50",
+        "size_bytes": 42318
+      },
+      {
+        "url": "https://xbrl.sec.gov/stpr/2024/stpr-2024.xsd",
+        "sha256": "3d6f5a2093d6360788961cbe4daabb3e3c4673ad5fba7addd2c08e2aa9fd2d6b",
+        "size_bytes": 12052
+      },
+      {
+        "url": "https://xbrl.sec.gov/stpr/2025/stpr-2025.xsd",
+        "sha256": "f72b24f3a5003087e8692545ffbf92545e84bf26acb160fcb5f1b5e9a59a5461",
+        "size_bytes": 11955
+      },
+      {
+        "url": "https://xbrl.sec.gov/stpr/2026/stpr-2026.xsd",
+        "sha256": "111c2a0ca6f9fedd383d215303fb714957d036e2fce6a663235197636453113e",
+        "size_bytes": 11955
+      }
+    ]
+  }
+}

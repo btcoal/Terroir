@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "list_version": "1.0.0",
+  "coverage_start_year": 2009,
+  "packages": [
+    {
+      "family": "country",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/country/2011/country-2011-01-31.zip"
+    },
+    {
+      "family": "country",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/country/2012/country-2012-01-31.zip"
+    },
+    {
+      "family": "country",
+      "vintage": 2013,
+      "url": "https://xbrl.sec.gov/country/2013/country-2013-01-31.zip"
+    },
+    {
+      "family": "country",
+      "vintage": 2016,
+      "url": "https://xbrl.sec.gov/country/2016/country-2016-01-31.zip"
+    },
+    {
+      "family": "country",
+      "vintage": 2017,
+      "url": "https://xbrl.sec.gov/country/2017/country-2017-01-31.zip"
+    },
+    {
+      "family": "country",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/country/2020/country-2020.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/currency/2011/currency-2011-01-31.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/currency/2012/currency-2012-01-31.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2014,
+      "url": "https://xbrl.sec.gov/currency/2014/currency-2014-01-31.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2016,
+      "url": "https://xbrl.sec.gov/currency/2016/currency-2016-01-31.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2017,
+      "url": "https://xbrl.sec.gov/currency/2017/currency-2017-01-31.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2019,
+      "url": "https://xbrl.sec.gov/currency/2019/currency-2019.zip"
+    },
+    {
+      "family": "currency",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/currency/2020/currency-2020.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/dei/2011/dei-2011-01-31.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/dei/2012/dei-2012-01-31.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2013,
+      "url": "https://xbrl.sec.gov/dei/2013/dei-2013-01-31.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2014,
+      "url": "https://xbrl.sec.gov/dei/2014/dei-2014-01-31.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2018,
+      "url": "https://xbrl.sec.gov/dei/2018/dei-2018.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2019,
+      "url": "https://xbrl.sec.gov/dei/2019/dei-2019.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/dei/2020/dei-2020.zip"
+    },
+    {
+      "family": "dei",
+      "vintage": 2024,
+      "url": "https://xbrl.sec.gov/dei/2024/dei-2024.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/exch/2011/exch-2011-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2012,
+      "url": "https://xbrl.sec.gov/exch/2012/exch-2012-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2013,
+      "url": "https://xbrl.sec.gov/exch/2013/exch-2013-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2014,
+      "url": "https://xbrl.sec.gov/exch/2014/exch-2014-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2015,
+      "url": "https://xbrl.sec.gov/exch/2015/exch-2015-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2016,
+      "url": "https://xbrl.sec.gov/exch/2016/exch-2016-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2017,
+      "url": "https://xbrl.sec.gov/exch/2017/exch-2017-01-31.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2019,
+      "url": "https://xbrl.sec.gov/exch/2019/exch-2019.zip"
+    },
+    {
+      "family": "exch",
+      "vintage": 2020,
+      "url": "https://xbrl.sec.gov/exch/2020/exch-2020.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2018,
+      "url": "https://xbrl.fasb.org/srt/2018/srt-2018-01-31.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2019,
+      "url": "https://xbrl.fasb.org/srt/2019/srt-2019-01-31.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2020,
+      "url": "https://xbrl.fasb.org/srt/2020/srt-2020-01-31.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2021,
+      "url": "https://xbrl.fasb.org/srt/2021/srt-2021-01-31.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2022,
+      "url": "https://xbrl.fasb.org/srt/2022/srt-2022.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2023,
+      "url": "https://xbrl.fasb.org/srt/2023/srt-2023.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2024,
+      "url": "https://xbrl.fasb.org/srt/2024/srt-2024.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2025,
+      "url": "https://xbrl.fasb.org/srt/2025/srt-2025.zip"
+    },
+    {
+      "family": "srt",
+      "vintage": 2026,
+      "url": "https://xbrl.fasb.org/srt/2026/srt-2026.zip"
+    },
+    {
+      "family": "stpr",
+      "vintage": 2011,
+      "url": "https://xbrl.sec.gov/stpr/2011/stpr-2011-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2011,
+      "url": "https://xbrl.fasb.org/us-gaap/2011/us-gaap-2011-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2012,
+      "url": "https://xbrl.fasb.org/us-gaap/2012/us-gaap-2012-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2013,
+      "url": "https://xbrl.fasb.org/us-gaap/2013/us-gaap-2013-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2014,
+      "url": "https://xbrl.fasb.org/us-gaap/2014/us-gaap-2014-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2015,
+      "url": "https://xbrl.fasb.org/us-gaap/2015/us-gaap-2015-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2016,
+      "url": "https://xbrl.fasb.org/us-gaap/2016/us-gaap-2016-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2017,
+      "url": "https://xbrl.fasb.org/us-gaap/2017/us-gaap-2017-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2018,
+      "url": "https://xbrl.fasb.org/us-gaap/2018/us-gaap-2018-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2019,
+      "url": "https://xbrl.fasb.org/us-gaap/2019/us-gaap-2019-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2020,
+      "url": "https://xbrl.fasb.org/us-gaap/2020/us-gaap-2020-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2021,
+      "url": "https://xbrl.fasb.org/us-gaap/2021/us-gaap-2021-01-31.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2022,
+      "url": "https://xbrl.fasb.org/us-gaap/2022/us-gaap-2022.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2023,
+      "url": "https://xbrl.fasb.org/us-gaap/2023/us-gaap-2023.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2024,
+      "url": "https://xbrl.fasb.org/us-gaap/2024/us-gaap-2024.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2025,
+      "url": "https://xbrl.fasb.org/us-gaap/2025/us-gaap-2025.zip"
+    },
+    {
+      "family": "us-gaap",
+      "vintage": 2026,
+      "url": "https://xbrl.fasb.org/us-gaap/2026/us-gaap-2026.zip"
+    }
+  ],
+  "known_gaps": [
+    {
+      "family": "us-gaap",
+      "vintages": [
+        2009,
+        2010
+      ],
+      "reason": "Pre-2011 us-gaap packages were hosted at taxonomies.xbrl.us, which no longer serves them. Early-vintage filings that reference them are rare (UF-010A: XBRL mandate phase-in) and their consumed schemas are captured per-accession as external closure objects under UF-012. Resolve via SEC archive mirror if the UF-021 coverage check reports live references."
+    },
+    {
+      "family": "dei/country/currency/exch/stpr",
+      "vintages": "non-annual",
+      "reason": "SEC document/entity and code-list families publish a vintage only in years the taxonomy changed; missing years are not gaps. Filings reference the most recent published vintage."
+    }
+  ]
+}

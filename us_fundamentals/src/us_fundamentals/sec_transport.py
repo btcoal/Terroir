@@ -294,6 +294,18 @@ class SecTransport:
             )
             return result
 
+    def head(self, url: str) -> int:
+        """Rate-limited existence probe; returns the HTTP status code."""
+        self.rate_limiter.acquire()
+        try:
+            response = self._client.head(url)
+        except httpx.TransportError:
+            return -1
+        self.logger.info(
+            "sec_head", extra={"url": url, "status": response.status_code}
+        )
+        return response.status_code
+
     def download_file(self, url: str, destination: Path) -> Path:
         """Stream a bulk archive to disk, resuming from a partial download.
 
