@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "calendar": "calendar_2012.json",
+  "cases": [
+    {
+      "id": "before-open",
+      "category": "before_open",
+      "input": {"sec_acceptance_datetime": "2012-06-14T07:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-14T07:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-14",
+        "eligible_at_open": true,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "during-session",
+      "category": "during_session",
+      "input": {"sec_acceptance_datetime": "2012-06-14T12:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-14T12:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-15",
+        "eligible_at_open": false,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "just-before-close-buffer-crosses-close",
+      "category": "just_before_close",
+      "input": {"sec_acceptance_datetime": "2012-06-14T15:59:59-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-14T16:01:29-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-15",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "just-before-close-stays-before-close",
+      "category": "just_before_close",
+      "input": {"sec_acceptance_datetime": "2012-06-14T15:50:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-14T15:51:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-15",
+        "eligible_at_open": false,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "after-close",
+      "category": "after_close",
+      "input": {"sec_acceptance_datetime": "2012-06-14T17:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-14T17:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-15",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "after-1730-rollover-does-not-shift-availability",
+      "category": "after_1730_eastern",
+      "input": {"sec_acceptance_datetime": "2012-06-14T17:45:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-14T17:46:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-15",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "friday-after-1730-defers-to-monday",
+      "category": "after_1730_eastern",
+      "input": {"sec_acceptance_datetime": "2012-06-15T18:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-15T18:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-18",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "weekend",
+      "category": "non_session_day",
+      "input": {"sec_acceptance_datetime": "2012-06-16T10:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-06-16T10:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-06-18",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "half-day-after-early-close",
+      "category": "half_day",
+      "input": {"sec_acceptance_datetime": "2012-07-03T14:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-07-03T14:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-07-05",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "unscheduled-closure-sandy",
+      "category": "non_session_day",
+      "input": {"sec_acceptance_datetime": "2012-10-29T09:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-10-29T09:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-10-31",
+        "eligible_at_open": false,
+        "eligible_at_close": false
+      }
+    },
+    {
+      "id": "dst-spring-forward-week",
+      "category": "dst",
+      "input": {"sec_acceptance_datetime": "2012-03-12T09:00:00-04:00"},
+      "expected": {
+        "information_available_at": "2012-03-12T09:01:30-04:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-03-12",
+        "eligible_at_open": true,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "dst-fall-back-week",
+      "category": "dst",
+      "input": {"sec_acceptance_datetime": "2012-11-05T09:15:00-05:00"},
+      "expected": {
+        "information_available_at": "2012-11-05T09:16:30-05:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-11-05",
+        "eligible_at_open": true,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "availability-exactly-at-open-is-not-before-open",
+      "category": "boundary_equality",
+      "input": {"sec_acceptance_datetime": "2012-01-05T14:28:30Z"},
+      "expected": {
+        "information_available_at": "2012-01-05T14:30:00+00:00",
+        "availability_method": "acceptance_plus_buffer",
+        "availability_confidence": "modeled",
+        "eligible_session": "2012-01-06",
+        "eligible_at_open": false,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "observed-dissemination-overrides-buffer",
+      "category": "availability_method",
+      "input": {
+        "sec_acceptance_datetime": "2012-06-14T08:00:00-04:00",
+        "observed_first_seen_at": "2012-06-14T08:02:11-04:00",
+        "availability_method": "observed_dissemination"
+      },
+      "expected": {
+        "information_available_at": "2012-06-14T08:02:11-04:00",
+        "availability_method": "observed_dissemination",
+        "availability_confidence": "exact",
+        "eligible_session": "2012-06-14",
+        "eligible_at_open": true,
+        "eligible_at_close": true
+      }
+    },
+    {
+      "id": "manual-evidence",
+      "category": "availability_method",
+      "input": {
+        "sec_acceptance_datetime": "2012-06-14T07:30:00-04:00",
+        "manual_available_at": "2012-06-14T06:45:00-04:00",
+        "availability_method": "manual_evidence"
+      },
+      "expected": {
+        "information_available_at": "2012-06-14T06:45:00-04:00",
+        "availability_method": "manual_evidence",
+        "availability_confidence": "exact",
+        "eligible_session": "2012-06-14",
+        "eligible_at_open": true,
+        "eligible_at_close": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "policy_id": "us_fundamentals_availability",
+  "policy_version": "1.0.0",
+  "status": "frozen",
+  "gold_fields": [
+    "sec_acceptance_datetime",
+    "information_available_at",
+    "observed_first_seen_at",
+    "availability_method",
+    "availability_policy_version",
+    "availability_confidence"
+  ],
+  "availability_methods": [
+    "observed_dissemination",
+    "acceptance_plus_buffer",
+    "manual_evidence"
+  ],
+  "availability_confidence_levels": ["exact", "modeled", "assumed"],
+  "backfill": {
+    "method": "acceptance_plus_buffer",
+    "dissemination_buffer_seconds": 90,
+    "confidence": "modeled"
+  },
+  "research_contract": {
+    "fields": [
+      "eligible_session",
+      "eligible_at_open",
+      "eligible_at_close",
+      "execution_policy_version"
+    ],
+    "default_daily_policy": {
+      "policy_id": "daily_next_open",
+      "rule": "first_session_open_after_availability",
+      "processing_latency_seconds": 0,
+      "intra_session_information_accepted": false
+    },
+    "intraday_requires_explicit_latency": true
+  },
+  "calendar_contract": {
+    "exchange_timezone": "America/New_York",
+    "session_kinds": ["full", "half_day"],
+    "requires_explicit_closures": true,
+    "missing_weekday_entry_is_error": true,
+    "versioned": true
+  },
+  "edgar": {
+    "acceptance_window_local": ["06:00", "22:00"],
+    "filing_date_rollover_local": "17:30",
+    "rollover_affects_information_availability": false
+  }
+}
