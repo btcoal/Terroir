@@ -51,10 +51,21 @@ class MarketObservationContractTests(unittest.TestCase):
     def test_interface_specifies_every_required_field_group(self) -> None:
         fields = set(self.schema["properties"])
         for required in (
-            "open", "high", "low", "close", "raw_close", "share_volume",
-            "cumulative_split_factor", "cash_dividend", "total_return",
-            "delisting_return", "market_cap", "source_available",
-            "dataset_version", "qc_status", "security_id",
+            "open",
+            "high",
+            "low",
+            "close",
+            "raw_close",
+            "share_volume",
+            "cumulative_split_factor",
+            "cash_dividend",
+            "total_return",
+            "delisting_return",
+            "market_cap",
+            "source_available",
+            "dataset_version",
+            "qc_status",
+            "security_id",
         ):
             self.assertIn(required, fields)
 

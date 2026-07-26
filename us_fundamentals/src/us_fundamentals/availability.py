@@ -10,10 +10,11 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
-from typing import Any, Mapping, Sequence
+from typing import Any
 from zoneinfo import ZoneInfo
 
 
@@ -47,7 +48,7 @@ class TradingCalendar:
     non_sessions: Mapping[date, str]
 
     @classmethod
-    def from_file(cls, path: str | Path) -> "TradingCalendar":
+    def from_file(cls, path: str | Path) -> TradingCalendar:
         with Path(path).open(encoding="utf-8") as calendar_file:
             payload = json.load(calendar_file)
         tz_name = payload.get("exchange_timezone")
@@ -136,7 +137,7 @@ class AvailabilityPolicy:
     processing_latency: timedelta
 
     @classmethod
-    def from_file(cls, path: str | Path) -> "AvailabilityPolicy":
+    def from_file(cls, path: str | Path) -> AvailabilityPolicy:
         with Path(path).open(encoding="utf-8") as policy_file:
             payload = json.load(policy_file)
         backfill = payload.get("backfill", {})
@@ -182,8 +183,8 @@ class AvailabilityPolicy:
         if method not in self.methods:
             raise AvailabilityRecordError(f"unknown availability_method {method!r}")
 
-        acceptance = _aware(record, "sec_acceptance_datetime", required=True)
-        observed = _aware(record, "observed_first_seen_at", required=False)
+        acceptance = _aware_required(record, "sec_acceptance_datetime")
+        observed = _aware_optional(record, "observed_first_seen_at")
 
         if method == "observed_dissemination":
             if observed is None:
@@ -192,7 +193,7 @@ class AvailabilityPolicy:
                 )
             available_at, confidence = observed, "exact"
         elif method == "manual_evidence":
-            manual = _aware(record, "manual_available_at", required=True)
+            manual = _aware_required(record, "manual_available_at")
             available_at, confidence = manual, "exact"
         else:  # acceptance_plus_buffer
             available_at = acceptance + self.dissemination_buffer
@@ -283,17 +284,20 @@ def _local(session_date: date, hhmm: str, tz: ZoneInfo) -> datetime:
     return datetime.combine(session_date, time.fromisoformat(hhmm), tzinfo=tz)
 
 
-def _aware(
-    record: Mapping[str, Any], field: str, required: bool
-) -> datetime | None:
+def _aware_optional(record: Mapping[str, Any], field: str) -> datetime | None:
     value = record.get(field)
     if value is None:
-        if required:
-            raise AvailabilityRecordError(f"{field} is required")
         return None
     parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
     if parsed.tzinfo is None or parsed.utcoffset() is None:
         raise AvailabilityRecordError(f"{field} must include a UTC offset")
+    return parsed
+
+
+def _aware_required(record: Mapping[str, Any], field: str) -> datetime:
+    parsed = _aware_optional(record, field)
+    if parsed is None:
+        raise AvailabilityRecordError(f"{field} is required")
     return parsed
 
 

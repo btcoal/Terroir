@@ -5,7 +5,6 @@ import sys
 import unittest
 from pathlib import Path
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
@@ -15,11 +14,8 @@ from us_fundamentals.eligibility import (  # noqa: E402
     verify_fixture,
 )
 
-
 CONFIG_PATH = PROJECT_ROOT / "config" / "release_1_issuer_universe.json"
-FIXTURE_PATH = (
-    PROJECT_ROOT / "tests" / "fixtures" / "release_1_eligibility_cases.json"
-)
+FIXTURE_PATH = PROJECT_ROOT / "tests" / "fixtures" / "release_1_eligibility_cases.json"
 
 
 class ReleasePolicyTests(unittest.TestCase):
@@ -70,9 +66,7 @@ class ReleasePolicyTests(unittest.TestCase):
             "sec_acceptance_datetime": "2024-07-01T12:00:00-04:00",
         }
         acquired = self.policy.evaluate({**base, "ingestion_status": "acquired"})
-        failed = self.policy.evaluate(
-            {**base, "ingestion_status": "terminal_failure"}
-        )
+        failed = self.policy.evaluate({**base, "ingestion_status": "terminal_failure"})
         self.assertEqual(acquired.eligibility_status, "eligible")
         self.assertEqual(failed.eligibility_status, "eligible")
         self.assertNotEqual(acquired.ingestion_status, failed.ingestion_status)
@@ -106,9 +100,7 @@ class ReleasePolicyTests(unittest.TestCase):
             }
         )
         self.assertEqual(decision.eligibility_status, "indeterminate")
-        self.assertEqual(
-            decision.reason_codes, ("invalid_sec_acceptance_datetime",)
-        )
+        self.assertEqual(decision.reason_codes, ("invalid_sec_acceptance_datetime",))
 
     def test_unknown_ingestion_status_is_rejected_as_bad_input(self) -> None:
         with self.assertRaises(FilingRecordError):
@@ -127,9 +119,7 @@ class ReleasePolicyTests(unittest.TestCase):
     def test_metric_later_start_requires_evidence_and_versioning(self) -> None:
         self.assertTrue(self.policy.metric_later_start_allowed)
         self.assertTrue(self.policy.metric_later_start_requires_evidence)
-        self.assertTrue(
-            self.policy.metric_later_start_requires_version_increment
-        )
+        self.assertTrue(self.policy.metric_later_start_requires_version_increment)
 
 
 if __name__ == "__main__":

@@ -19,9 +19,7 @@ from us_fundamentals.availability import (  # noqa: E402
 
 CONFIG_PATH = PROJECT_ROOT / "config" / "availability_policy.json"
 CALENDAR_PATH = PROJECT_ROOT / "tests" / "fixtures" / "calendar_2012.json"
-FIXTURE_PATH = (
-    PROJECT_ROOT / "tests" / "fixtures" / "availability_boundary_cases.json"
-)
+FIXTURE_PATH = PROJECT_ROOT / "tests" / "fixtures" / "availability_boundary_cases.json"
 
 
 class AvailabilityPolicyTests(unittest.TestCase):
@@ -98,9 +96,7 @@ class AvailabilityPolicyTests(unittest.TestCase):
         )
         self.assertEqual(research["eligible_session"], "2012-06-15")
         # Gold availability is unchanged by the deferral to the next session.
-        self.assertEqual(
-            gold["information_available_at"], "2012-06-14T16:01:29-04:00"
-        )
+        self.assertEqual(gold["information_available_at"], "2012-06-14T16:01:29-04:00")
 
 
 if __name__ == "__main__":

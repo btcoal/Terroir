@@ -1,0 +1,46 @@
+[project]
+name = "us-fundamentals"
+version = "0.1.0"
+description = "Point-in-time U.S. fundamentals pipeline (Release 1)"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27",
+    "duckdb>=1.1",
+    "pyarrow>=17",
+    "jsonschema>=4.21",
+    "psycopg[binary]>=3.2",
+    "arelle-release>=2.30",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "pytest>=8.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/us_fundamentals"]
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src/us_fundamentals"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+no_implicit_optional = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

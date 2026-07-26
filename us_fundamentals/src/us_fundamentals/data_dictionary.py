@@ -6,10 +6,10 @@ import argparse
 import hashlib
 import json
 import re
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Mapping, Sequence
-
+from typing import Any
 
 METRIC_KINDS = frozenset({"reported", "derived"})
 STATEMENTS = frozenset(
@@ -32,9 +32,7 @@ DIMENSIONAL_SCOPES = frozenset(
 )
 INDUSTRIES = frozenset({"all_release_1"})
 MATERIALITY_TIERS = frozenset({"core", "standard", "supplemental"})
-FORMULA_METHODS = frozenset(
-    {"direct", "calculation", "rolling", "growth", "ratio"}
-)
+FORMULA_METHODS = frozenset({"direct", "calculation", "rolling", "growth", "ratio"})
 
 ROOT_REQUIRED_FIELDS = frozenset(
     {
@@ -108,7 +106,7 @@ class MetricDefinition:
     version_added: str
 
     @classmethod
-    def from_mapping(cls, payload: Mapping[str, Any]) -> "MetricDefinition":
+    def from_mapping(cls, payload: Mapping[str, Any]) -> MetricDefinition:
         formula = payload["formula"]
         return cls(
             metric_id=payload["metric_id"],
@@ -140,15 +138,13 @@ class CanonicalDataDictionary:
     logical_hash: str
 
     @classmethod
-    def from_file(cls, path: str | Path) -> "CanonicalDataDictionary":
+    def from_file(cls, path: str | Path) -> CanonicalDataDictionary:
         with Path(path).open(encoding="utf-8") as dictionary_file:
             payload = json.load(dictionary_file)
         return cls.from_mapping(payload)
 
     @classmethod
-    def from_mapping(
-        cls, payload: Mapping[str, Any]
-    ) -> "CanonicalDataDictionary":
+    def from_mapping(cls, payload: Mapping[str, Any]) -> CanonicalDataDictionary:
         errors = validate_dictionary_payload(payload)
         if errors:
             raise DictionaryValidationError(errors)
@@ -242,12 +238,8 @@ def validate_dictionary_payload(payload: Any) -> list[str]:
         _validate_enum(metric, "period_type", PERIOD_TYPES, path, errors)
         _validate_enum(metric, "unit", UNITS, path, errors)
         _validate_enum(metric, "polarity", POLARITIES, path, errors)
-        _validate_enum(
-            metric, "dimensional_scope", DIMENSIONAL_SCOPES, path, errors
-        )
-        _validate_enum(
-            metric, "materiality_tier", MATERIALITY_TIERS, path, errors
-        )
+        _validate_enum(metric, "dimensional_scope", DIMENSIONAL_SCOPES, path, errors)
+        _validate_enum(metric, "materiality_tier", MATERIALITY_TIERS, path, errors)
         _validate_string_array(
             metric,
             "industry_applicability",
@@ -280,11 +272,11 @@ def validate_dictionary_payload(payload: Any) -> list[str]:
             if metric_kind == "derived" and formula.get("method") == "direct":
                 errors.append(f"{path}.formula.method cannot be direct when derived")
             if metric_kind == "reported" and formula.get("method") != "direct":
-                errors.append(
-                    f"{path}.formula.method must be direct when reported"
-                )
+                errors.append(f"{path}.formula.method must be direct when reported")
         if metric_kind == "derived" and metric.get("statement") != "derived":
-            errors.append(f"{path}.statement must be derived when metric_kind is derived")
+            errors.append(
+                f"{path}.statement must be derived when metric_kind is derived"
+            )
         if metric_kind == "reported" and metric.get("statement") == "derived":
             errors.append(
                 f"{path}.statement cannot be derived when metric_kind is reported"
@@ -340,9 +332,7 @@ def _validate_formula(
         allow_empty=True,
         require_metric_ids=True,
     )
-    _validate_string_array(
-        formula, "constraints", path, errors, allow_empty=False
-    )
+    _validate_string_array(formula, "constraints", path, errors, allow_empty=False)
     overlap = sorted(set(required).intersection(optional))
     if overlap:
         errors.append(
@@ -376,9 +366,7 @@ def _validate_enum(
 ) -> None:
     value = payload.get(field)
     if value not in allowed:
-        errors.append(
-            f"{path}.{field} must be one of: {', '.join(sorted(allowed))}"
-        )
+        errors.append(f"{path}.{field} must be one of: {', '.join(sorted(allowed))}")
 
 
 def _validate_string_array(
@@ -404,17 +392,14 @@ def _validate_string_array(
         errors.append(f"{path}.{field} must not contain duplicates")
     invalid = sorted(item for item in value if allowed and item not in allowed)
     if invalid:
-        errors.append(
-            f"{path}.{field} contains invalid values: {', '.join(invalid)}"
-        )
+        errors.append(f"{path}.{field} contains invalid values: {', '.join(invalid)}")
     if require_metric_ids:
         invalid_ids = sorted(
             item for item in value if not SNAKE_CASE_PATTERN.fullmatch(item)
         )
         if invalid_ids:
             errors.append(
-                f"{path}.{field} contains invalid metric IDs: "
-                f"{', '.join(invalid_ids)}"
+                f"{path}.{field} contains invalid metric IDs: {', '.join(invalid_ids)}"
             )
     return tuple(value)
 
@@ -423,9 +408,7 @@ def _find_formula_cycles(
     formula_inputs: Mapping[str, tuple[str, ...]], known_ids: set[str]
 ) -> list[str]:
     graph = {
-        metric_id: tuple(
-            input_id for input_id in inputs if input_id in formula_inputs
-        )
+        metric_id: tuple(input_id for input_id in inputs if input_id in formula_inputs)
         for metric_id, inputs in formula_inputs.items()
         if metric_id in known_ids
     }

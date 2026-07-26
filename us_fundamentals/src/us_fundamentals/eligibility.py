@@ -9,10 +9,11 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Mapping, Sequence
+from typing import Any
 
 
 class PolicyConfigurationError(ValueError):
@@ -71,7 +72,7 @@ class ReleasePolicy:
     metric_later_start_requires_version_increment: bool
 
     @classmethod
-    def from_file(cls, path: str | Path) -> "ReleasePolicy":
+    def from_file(cls, path: str | Path) -> ReleasePolicy:
         with Path(path).open(encoding="utf-8") as policy_file:
             payload = json.load(policy_file)
         if not isinstance(payload, dict):
@@ -79,7 +80,7 @@ class ReleasePolicy:
         return cls.from_mapping(payload)
 
     @classmethod
-    def from_mapping(cls, payload: Mapping[str, Any]) -> "ReleasePolicy":
+    def from_mapping(cls, payload: Mapping[str, Any]) -> ReleasePolicy:
         required_sections = {
             "policy_id",
             "policy_version",
@@ -143,7 +144,10 @@ class ReleasePolicy:
                 _string_tuple(payload.get("supported_forms"), "supported_forms")
             ),
             included_accounting_standards=frozenset(
-                _string_tuple(accounting_standards.get("included"), "accounting_standards.included")
+                _string_tuple(
+                    accounting_standards.get("included"),
+                    "accounting_standards.included",
+                )
             ),
             unsupported_accounting_standards=frozenset(
                 _string_tuple(
@@ -152,7 +156,9 @@ class ReleasePolicy:
                 )
             ),
             included_registrant_types=frozenset(
-                _string_tuple(registrant_types.get("included"), "registrant_types.included")
+                _string_tuple(
+                    registrant_types.get("included"), "registrant_types.included"
+                )
             ),
             unsupported_registrant_types=frozenset(
                 _string_tuple(
@@ -229,9 +235,7 @@ class ReleasePolicy:
     def evaluate(self, record: Mapping[str, Any]) -> EligibilityDecision:
         """Classify one normalized filing without conflating acquisition state."""
 
-        ingestion_status = record.get(
-            "ingestion_status", self.default_ingestion_status
-        )
+        ingestion_status = record.get("ingestion_status", self.default_ingestion_status)
         if ingestion_status not in self.ingestion_statuses:
             raise FilingRecordError(
                 f"unknown ingestion_status {ingestion_status!r}; "
@@ -282,10 +286,7 @@ class ReleasePolicy:
             except FilingRecordError as error:
                 invalid_fields["sec_acceptance_datetime"] = str(error)
                 indeterminate_reasons.append("invalid_sec_acceptance_datetime")
-        if (
-            acceptance_datetime is not None
-            and acceptance_datetime < self.filing_start
-        ):
+        if acceptance_datetime is not None and acceptance_datetime < self.filing_start:
             exclusion_reasons.append("before_release_start")
 
         if exclusion_reasons:
@@ -338,9 +339,7 @@ def verify_fixture(
             "ingestion_status": decision["ingestion_status"],
         }
         if observed != expected:
-            failures.append(
-                {"id": case_id, "expected": expected, "observed": observed}
-            )
+            failures.append({"id": case_id, "expected": expected, "observed": observed})
     return failures
 
 
@@ -375,9 +374,7 @@ def _string_tuple(value: Any, field: str) -> tuple[str, ...]:
     return tuple(value)
 
 
-def _required_true(
-    payload: Mapping[str, Any], key: str, section: str
-) -> bool:
+def _required_true(payload: Mapping[str, Any], key: str, section: str) -> bool:
     if payload.get(key) is not True:
         raise PolicyConfigurationError(f"{section}.{key} must be true")
     return True
@@ -387,9 +384,7 @@ def _is_missing(value: Any) -> bool:
     return value is None or (isinstance(value, str) and not value.strip())
 
 
-def _aware_datetime(
-    value: Any, field: str, error_type: type[ValueError]
-) -> datetime:
+def _aware_datetime(value: Any, field: str, error_type: type[ValueError]) -> datetime:
     if not isinstance(value, str):
         raise error_type(f"{field} must be an ISO-8601 string")
     try:

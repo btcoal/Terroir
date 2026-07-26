@@ -8,7 +8,6 @@ import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
@@ -18,7 +17,6 @@ from us_fundamentals.data_dictionary import (  # noqa: E402
     main,
     validate_dictionary_payload,
 )
-
 
 DICTIONARY_PATH = PROJECT_ROOT / "config" / "canonical_data_dictionary.json"
 
@@ -83,9 +81,7 @@ class CanonicalDataDictionaryTests(unittest.TestCase):
         self.assertEqual(reported.metric_kind, "reported")
         self.assertEqual(reported.formula["method"], "direct")
         self.assertEqual(reconstructed.formula["method"], "calculation")
-        self.assertIn(
-            "stock_based_compensation", adjusted.formula["required_inputs"]
-        )
+        self.assertIn("stock_based_compensation", adjusted.formula["required_inputs"])
         self.assertEqual(
             len(
                 {
@@ -135,23 +131,21 @@ class CanonicalDataDictionaryTests(unittest.TestCase):
     def test_unknown_formula_inputs_are_rejected(self) -> None:
         payload = copy.deepcopy(self.payload)
         metric = next(
-            item
-            for item in payload["metrics"]
-            if item["metric_id"] == "net_debt"
+            item for item in payload["metrics"] if item["metric_id"] == "net_debt"
         )
         metric["formula"]["required_inputs"].append("missing_metric")
         errors = validate_dictionary_payload(payload)
         self.assertTrue(
-            any("references unknown metric missing_metric" in error for error in errors),
+            any(
+                "references unknown metric missing_metric" in error for error in errors
+            ),
             errors,
         )
 
     def test_derived_metrics_cannot_claim_direct_formulas(self) -> None:
         payload = copy.deepcopy(self.payload)
         metric = next(
-            item
-            for item in payload["metrics"]
-            if item["metric_id"] == "net_debt"
+            item for item in payload["metrics"] if item["metric_id"] == "net_debt"
         )
         metric["formula"]["method"] = "direct"
         errors = validate_dictionary_payload(payload)
@@ -163,14 +157,10 @@ class CanonicalDataDictionaryTests(unittest.TestCase):
     def test_formula_dependency_cycles_are_rejected(self) -> None:
         payload = copy.deepcopy(self.payload)
         first = next(
-            item
-            for item in payload["metrics"]
-            if item["metric_id"] == "total_debt"
+            item for item in payload["metrics"] if item["metric_id"] == "total_debt"
         )
         second = next(
-            item
-            for item in payload["metrics"]
-            if item["metric_id"] == "net_debt"
+            item for item in payload["metrics"] if item["metric_id"] == "net_debt"
         )
         first["formula"]["required_inputs"].append("net_debt")
         second["formula"]["required_inputs"].append("total_debt")
@@ -184,14 +174,14 @@ class CanonicalDataDictionaryTests(unittest.TestCase):
         payload["metrics"][0]["unit"] = "dollars"
         with self.assertRaises(DictionaryValidationError) as context:
             CanonicalDataDictionary.from_mapping(payload)
-        self.assertTrue(any(".unit must be one of" in item for item in context.exception.errors))
+        self.assertTrue(
+            any(".unit must be one of" in item for item in context.exception.errors)
+        )
 
     def test_validation_command_reports_metric_count_and_hash(self) -> None:
         output = io.StringIO()
         with redirect_stdout(output):
-            exit_code = main(
-                ["validate", "--dictionary", str(DICTIONARY_PATH)]
-            )
+            exit_code = main(["validate", "--dictionary", str(DICTIONARY_PATH)])
         result = json.loads(output.getvalue())
         self.assertEqual(exit_code, 0)
         self.assertEqual(result["status"], "valid")
