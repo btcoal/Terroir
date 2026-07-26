@@ -60,6 +60,23 @@ Acquisition --> Silver parsing --> Security master
                        Backfill and release
 ```
 
+The diagram shows the dominant flow, not every edge. Three tickets deliberately
+run against it:
+
+- UF-010A probes real filings immediately after the repository scaffold, so
+  M1 sizing rests on measurement rather than estimate.
+- UF-013 depends on the UF-020 transport client, because taxonomy packages are
+  fetched from SEC hosts and must obey the same rate and identification policy
+  as every other SEC request.
+- UF-016 depends on the UF-021 accession inventory, because partitioning and
+  row-group choices are decided by real cardinality.
+
+The consequence for scheduling is that UF-020 is pulled forward into the M1
+working set. It is gated only by UF-010, so building it during M1 costs no
+critical path, and UF-013, UF-014, and UF-015 keep their existing order behind
+it. UF-016 is the one M1 ticket that genuinely cannot close until M2, because
+UF-021 is an M2 ticket; treat it as specified in M1 and executed in M2.
+
 ## Milestones
 
 | Milestone | Exit condition |
@@ -97,12 +114,13 @@ gates.
 | Ticket | Priority / size | Depends on | Status |
 | --- | --- | --- | --- |
 | [UF-010 — Scaffold the repository, CI, configuration, and observability](tickets/UF-010.md) | P0 / M | UF-005 | — |
+| [UF-010A — Run a bounded real-data acquisition spike](tickets/UF-010A.md) | P0 / S | UF-010 | — |
 | [UF-011 — Implement versioned schemas and migrations](tickets/UF-011.md) | P0 / L | UF-002, UF-003, UF-004, UF-010 | — |
 | [UF-012 — Build immutable parser-input storage and accession manifests](tickets/UF-012.md) | P0 / M | UF-010, UF-011 | — |
-| [UF-013 — Build and pin the offline taxonomy package cache](tickets/UF-013.md) | P0 / L | UF-012 | — |
+| [UF-013 — Build and pin the offline taxonomy package cache](tickets/UF-013.md) | P0 / L | UF-012, UF-020 | — |
 | [UF-014 — Implement deterministic build manifests and logical hashing](tickets/UF-014.md) | P0 / M | UF-010, UF-011, UF-012, UF-013 | — |
 | [UF-015 — Create synthetic fixtures and PIT metamorphic test harness](tickets/UF-015.md) | P0 / L | UF-003, UF-010, UF-011, UF-014 | — |
-| [UF-016 — Benchmark and select Parquet/DuckDB physical layouts](tickets/UF-016.md) | P0 / M | UF-011, UF-014 | — |
+| [UF-016 — Benchmark and select Parquet/DuckDB physical layouts](tickets/UF-016.md) | P0 / M | UF-011, UF-014, UF-021 | — |
 
 ---
 
@@ -250,3 +268,7 @@ Release 1 is complete only when UF-001 through UF-061 are complete and:
    zero-leakage gates;
 5. the market-data boundary is explicit and no Release 1 result implies that
    survivorship-free returns have already been solved.
+
+UF-010A is a measurement spike rather than a component. It must be complete
+before M1 sizing is trusted, but it ships no releasable artifact and is not a
+publication gate.
