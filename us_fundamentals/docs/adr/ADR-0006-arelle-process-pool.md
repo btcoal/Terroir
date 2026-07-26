@@ -16,9 +16,11 @@ Release 1.
 - Arelle's memory behavior over many filings is the dominant operational
   risk; process isolation turns leaks and crashes into a recycled worker and
   a classified filing failure instead of a dead pipeline.
-- Warm workers amortize taxonomy load, which is assumed to dominate cold
-  per-filing cost; the UF-010A spike measures this and revises
-  `assumptions.md` and this ADR with the observed figure.
+- Warm workers amortize taxonomy load, which UF-010A confirmed dominates
+  cold cost: ~6 s first parse per vintage with a cold cache versus 0.6 s
+  median with the taxonomy cache warm (`spike-uf010a-report.md`). Measured
+  RSS (210 MB median, 412 MB max) supports 8–12 workers on the current
+  14 GB host.
 - A local pool has no serialization, auth, or deployment surface; a
   microservice adds all three for zero benefit on one host.
 

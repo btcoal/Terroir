@@ -25,10 +25,19 @@
   deferred to M2 exit with a default to split inference from fixtures.
 - **UF-070:** already mandates per-issuer-class child splits; unchanged.
 
-## Size recalibration
+## Size recalibration (completed with UF-010A, 2026-07-25)
 
-Deferred to UF-010A results by design — recalibrating from the provisional
-estimates would launder guesses into commitments. The `assumptions.md`
-revision log is the trigger: when UF-010A lands, sizes for UF-011–UF-016 and
-UF-020–UF-027 are re-reviewed against measured closure size, parse time, and
-RSS (owner: whoever lands UF-010A, in the same change).
+Reviewed against measured closure size, parse time, and RSS
+(`spike-uf010a-report.md`):
+
+- **UF-013**: L → M candidate. Seven vintages of taxonomy resources fit in
+  ~170 cached files; the superset enumeration is smaller than sized.
+- **UF-023**: keeps L. The binding constraints are the ~2 TB disk purchase
+  (now on its checklist) and the ~3.4M-request budget, not parse compute.
+  The object-level-resume child-split trigger (high-end closure sizes) did
+  NOT fire: median closure is 2 MB.
+- **UF-025**: keeps L for supervision/atomicity, but the load-test scope
+  shrinks — RSS recycling thresholds are generous at 210 MB median.
+- **UF-021**: keeps L; gains a requirement to expose per-accession XBRL
+  presence (the 2010–2011 cliff makes this a first-class inventory column).
+- All other M1/M2 tickets: no size change indicated.
